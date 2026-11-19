@@ -25,6 +25,11 @@ npm run build     # gera a pasta dist/
 npm run preview   # serve o build (o service worker só roda no build)
 ```
 
+## Publicação
+
+O app é publicado no GitHub Pages a cada push na `main` (workflow em `.github/workflows/deploy.yml`):
+https://supp3rdan.github.io/Personal/
+
 ## Estrutura
 
 ```
