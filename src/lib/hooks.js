@@ -65,31 +65,32 @@ export function useFocusTrap(ref, open, onClose) {
   }, [open, ref, onClose]);
 }
 
-// Quantos "popstate" fomos nós que provocamos (ao fechar pelo botão do app)
-let ignorePops = 0;
+// Pilha de telas/modais que fecham com o "voltar" do celular: só o do topo reage.
+const backStack = [];
+let ignorePops = 0; // popstates que nós mesmos provocamos ao fechar pelo botão do app
+let listening = false;
 
-/** Fecha o modal com o gesto/botão "voltar" do celular. */
+function onPopState() {
+  if (ignorePops > 0) { ignorePops -= 1; return; }
+  const top = backStack.pop();
+  if (top) { top.popped = true; top.close(); }
+}
+
+/** Fecha o modal/tela com o gesto/botão "voltar" do celular. */
 export function useBackClose(open, onClose) {
   const closeRef = useRef(onClose);
   closeRef.current = onClose;
   useEffect(() => {
     if (!open) return undefined;
-    const tag = { modal: Math.random() };
-    window.history.pushState(tag, '');
-    let poppedByBack = false;
-    const onPop = () => {
-      if (ignorePops > 0) { ignorePops -= 1; return; }
-      poppedByBack = true;
-      closeRef.current();
-    };
-    window.addEventListener('popstate', onPop);
+    if (!listening) { window.addEventListener('popstate', onPopState); listening = true; }
+    const entry = { close: () => closeRef.current(), popped: false };
+    backStack.push(entry);
+    window.history.pushState({ abc: true }, '');
     return () => {
-      window.removeEventListener('popstate', onPop);
-      // fechado pelo botão do app: desfaz a entrada que criamos no histórico
-      if (!poppedByBack && window.history.state?.modal === tag.modal) {
-        ignorePops += 1;
-        window.history.back();
-      }
+      const i = backStack.indexOf(entry);
+      if (i >= 0) backStack.splice(i, 1);
+      // fechado pelo app: desfaz a entrada que criamos no histórico
+      if (!entry.popped) { ignorePops += 1; window.history.back(); }
     };
   }, [open]);
 }

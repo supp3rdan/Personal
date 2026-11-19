@@ -2,7 +2,6 @@ import { useRef } from 'react';
 import { Download, Trash2, Upload } from 'lucide-react';
 import Modal from './Modal.jsx';
 import { exportData, useStore } from '../state/store.jsx';
-import { formatDate } from '../lib/text.js';
 
 function Toggle({ label, desc, checked, onChange }) {
   return (
@@ -57,30 +56,11 @@ export default function SettingsModal({ open, onClose, onToast }) {
   };
 
   return (
-    <Modal open={open} onClose={onClose} title="Ajustes e histórico" labelledBy="settings-title">
+    <Modal open={open} onClose={onClose} title="Ajustes" labelledBy="settings-title">
       <Toggle label="Descanso automático" desc="Inicia o timer ao marcar uma série" checked={cfg.autoDescanso} onChange={(v) => set({ autoDescanso: v })} />
       <Toggle label="Som ao fim do descanso" checked={cfg.som} onChange={(v) => set({ som: v })} />
       <Toggle label="Vibração" desc="Em celulares compatíveis" checked={cfg.vibrar} onChange={(v) => set({ vibrar: v })} />
       <Toggle label="GIFs da ExerciseDB" desc="Tenta carregar GIF animado nos detalhes (precisa de internet)" checked={cfg.gifs} onChange={(v) => set({ gifs: v })} />
-
-      <h3 className="mt-5 text-sm font-bold uppercase tracking-wide text-muted">Histórico</h3>
-      {state.historico.length === 0 ? (
-        <p className="mt-2 text-sm text-muted">Nenhum treino finalizado ainda.</p>
-      ) : (
-        <ul className="mt-2 space-y-2">
-          {state.historico.slice(0, 15).map((h) => (
-            <li key={h.data} className="rounded-xl bg-bg p-3">
-              <div className="flex justify-between text-sm">
-                <span className="font-bold text-white">Treino {h.treino} · {h.perfil === 'masculino' ? 'Masc.' : 'Fem.'}</span>
-                <span className="text-muted">{formatDate(h.data)}</span>
-              </div>
-              <p className="mt-1 text-xs text-muted">
-                {h.itens.filter((i) => i.series > 0).map((i) => `${i.nome}${i.kg ? ` ${i.kg}kg` : ''}`).join(' · ') || 'Sem séries registradas'}
-              </p>
-            </li>
-          ))}
-        </ul>
-      )}
 
       <h3 className="mt-5 text-sm font-bold uppercase tracking-wide text-muted">Dados</h3>
       <div className="mt-2 grid grid-cols-2 gap-2">

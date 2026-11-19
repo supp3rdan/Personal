@@ -64,30 +64,22 @@ export default function ExerciseCard({ ex, slotId, treino, ordem, extra = false,
   return (
     <article className={`rounded-2xl border bg-card p-3 transition-colors ${completo ? 'border-success/60' : 'border-line'}`}>
       <button type="button" onClick={() => onOpen(ex, slotId)} className="flex w-full items-start gap-3 text-left" aria-label={`Ver detalhes de ${ex.nome}`}>
-        <ExerciseMedia ex={ex} className="h-20 w-20 shrink-0 rounded-xl" />
+        <ExerciseMedia ex={ex} className="h-16 w-16 shrink-0 rounded-xl" />
         <div className="min-w-0 flex-1">
-          <div className="flex items-center gap-2 text-xs font-semibold text-accent">
-            <span>#{ordem}</span>
-            {extra && <span className="rounded bg-line px-1.5 py-0.5 text-[10px] uppercase text-muted">extra</span>}
-            <span className="text-muted">·</span>
-            <span>{MUSCULOS[ex.musculoPrincipal]}</span>
+          <div className="flex items-center gap-1.5 text-xs font-medium text-muted">
+            <span>{ordem}.</span>
+            <span>{MUSCULOS[ex.musculoPrincipal] || ex.musculoPrincipal}</span>
+            {extra && <span className="rounded bg-line px-1.5 py-0.5 text-[10px] uppercase">extra</span>}
             {completo && <Check size={16} className="ml-auto text-success" aria-label="Exercício concluído" />}
           </div>
           <h3 className="mt-0.5 text-base font-bold leading-snug text-white">{ex.nome}</h3>
-          {ex.musculosSecundarios.length > 0 && (
-            <p className="truncate text-xs text-muted">+ {ex.musculosSecundarios.map((m) => MUSCULOS[m] || m).join(', ')}</p>
-          )}
+          <p className="mt-1 flex items-center gap-3 text-sm">
+            <span className="font-bold text-accent">{p.series} × {repsLabel(p)}</span>
+            <span className="flex items-center gap-1 text-muted"><TimerIcon size={13} aria-hidden="true" />{p.descansoSeg}s</span>
+          </p>
         </div>
-        <Info size={20} className="shrink-0 text-muted" aria-hidden="true" />
+        <Info size={18} className="mt-0.5 shrink-0 text-muted/70" aria-hidden="true" />
       </button>
-
-      <div className="mt-3 flex flex-wrap gap-1.5 text-xs">
-        <span className="rounded-lg bg-accent/15 px-2 py-1 font-bold text-accent">{p.series} × {repsLabel(p)}</span>
-        <span className="flex items-center gap-1 rounded-lg bg-line px-2 py-1 text-muted"><TimerIcon size={12} aria-hidden="true" />{p.descansoSeg}s</span>
-        <span className="rounded-lg bg-line px-2 py-1 text-muted">{ex.cadencia}</span>
-      </div>
-
-      <p className="mt-2 text-sm leading-snug text-muted"><span className="font-semibold text-white/90">Dica: </span>{ex.dicaSeguranca}</p>
 
       <div className="mt-3 grid grid-cols-4 gap-2 sm:grid-cols-6" role="group" aria-label="Séries">
         {feitas.map((ok, i) => (

@@ -176,3 +176,29 @@ export function exportData(state) {
   const data = Object.fromEntries(KEYS.map((k) => [k, state[k]]));
   return { app: 'treino-abc', schema: SCHEMA, exportadoEm: new Date().toISOString(), data };
 }
+
+/** Resumo de um treino para a tela inicial e o cabeçalho. */
+export function workoutStats(state, treino, prescribeFn) {
+  const slots = workoutSlots(state, treino);
+  const checks = state.checks?.[state.perfil]?.[treino] || {};
+  let total = 0;
+  let feitas = 0;
+  let segundos = 0;
+  for (const { ex } of slots) {
+    const p = prescribeFn(ex, state.nivel);
+    total += p.series;
+    feitas += (checks[ex.id] || []).slice(0, p.series).filter(Boolean).length;
+    // ~40 s por série + descanso entre séries
+    segundos += p.series * 40 + Math.max(0, p.series - 1) * p.descansoSeg + 60;
+  }
+  const ultima = state.historico.find((h) => h.perfil === state.perfil && h.treino === treino);
+  return {
+    slots,
+    exercicios: slots.length,
+    total,
+    feitas,
+    pct: total ? Math.round((feitas / total) * 100) : 0,
+    minutos: Math.round(segundos / 300) * 5,
+    ultimaData: ultima?.data || null,
+  };
+}

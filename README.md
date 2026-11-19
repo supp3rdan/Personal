@@ -4,6 +4,7 @@ App web (PWA) para gerenciar e executar um **Treino ABC de musculação** com pe
 
 ## Funcionalidades
 
+- **Navegação simples**: tela inicial com os treinos A, B e C em cards (próximo treino destacado, duração estimada e progresso), abas Treinos · Biblioteca · Histórico e "voltar" do celular funcionando.
 - **Perfis Masculino/Feminino** com divisões A/B/C diferentes e cor de destaque própria (ciano / coral).
 - **Nível de experiência** (Iniciante, Intermediário, Avançado) ajusta séries e repetições automaticamente.
 - **Cards de exercício** com músculos, prescrição (séries × reps, descanso), cadência e dica de segurança.
@@ -14,7 +15,7 @@ App web (PWA) para gerenciar e executar um **Treino ABC de musculação** com pe
 - **Adicionar exercícios ao treino**: qualquer exercício da Biblioteca pode entrar no Treino A, B ou C como extra (e ser removido depois).
 - **Filtros combinados**: 14 grupos musculares (incluindo trapézio, antebraço, lombar e adutores), equipamento e busca por nome sem acento.
 - **Biblioteca**: 139 exercícios do app em português + ~600 do free-exercise-db quando houver internet.
-- **Histórico** de treinos, sugestão do próximo treino (A→B→C), exportar/importar backup em JSON.
+- **Histórico** em aba própria, sugestão do próximo treino (A→B→C), exportar/importar backup em JSON.
 - Mantém a tela ligada durante o treino (Wake Lock API, quando suportada).
 
 ## Rodar

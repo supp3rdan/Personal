@@ -35,8 +35,8 @@ export default function LibraryView({ filtros, setFiltros, onOpen }) {
 
   return (
     <div className="space-y-3">
-      <div className="pt-2">
-        <h2 className="text-xl font-black text-white">Explorar Biblioteca</h2>
+      <div className="pt-4">
+        <h2 className="text-2xl font-black text-white">Biblioteca</h2>
         <p className="mt-1 flex items-center gap-1.5 text-sm text-muted">
           {remoto.fonte === 'carregando' && <><Loader2 size={14} className="animate-spin" aria-hidden="true" /> Carregando catálogo online…</>}
           {(remoto.fonte === 'api' || remoto.fonte === 'cache') && <><Globe size={14} aria-hidden="true" /> {EXERCISES.length} exercícios do app + {todos.length - EXERCISES.length} do free-exercise-db</>}

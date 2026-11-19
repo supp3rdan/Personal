@@ -1,33 +1,19 @@
-import { useMemo } from 'react';
-import { Flag, Plus, Sparkles } from 'lucide-react';
+import { ArrowLeft, Flag, Plus, Sparkles } from 'lucide-react';
 import ExerciseCard from './ExerciseCard.jsx';
-import Filters, { aplicarFiltros } from './Filters.jsx';
-import { useStore, workoutSlots } from '../state/store.jsx';
-import { WORKOUTS } from '../data/workouts.js';
+import { useStore, workoutStats } from '../state/store.jsx';
+import { WORKOUTS, NEXT } from '../data/workouts.js';
+import { NIVEIS } from '../lib/labels.js';
 import { prescribe } from '../lib/prescription.js';
-import { useDebounce, useWakeLock } from '../lib/hooks.js';
+import { useWakeLock } from '../lib/hooks.js';
 
-export default function WorkoutView({ treino, filtros, setFiltros, onOpen, onToast, onAddExercise }) {
+export default function WorkoutView({ treino, onBack, onSwitch, onOpen, onToast, onAddExercise }) {
   const { state, dispatch } = useStore();
   const info = WORKOUTS[state.perfil][treino];
-  const slots = workoutSlots(state, treino);
-  const buscaDeb = useDebounce(filtros.busca, 200);
-  const busca = filtros.busca === '' ? '' : buscaDeb; // limpar a busca vale na hora
-  const visiveis = useMemo(() => aplicarFiltros(slots, filtros, busca), [slots, filtros, busca]);
-
+  const { slots, total, feitas, pct } = workoutStats(state, treino, prescribe);
   const checks = state.checks?.[state.perfil]?.[treino] || {};
-  let total = 0;
-  let feitas = 0;
-  for (const { ex } of slots) {
-    const n = prescribe(ex, state.nivel).series;
-    total += n;
-    feitas += (checks[ex.id] || []).slice(0, n).filter(Boolean).length;
-  }
-  const pct = total ? Math.round((feitas / total) * 100) : 0;
-  const emAndamento = feitas > 0;
-  const sugerido = state.proximo?.[state.perfil];
+  const proximo = state.proximo?.[state.perfil] || 'A';
 
-  useWakeLock(emAndamento && pct < 100);
+  useWakeLock(feitas > 0 && pct < 100);
 
   const finalizar = () => {
     if (feitas === 0) { onToast('Marque pelo menos uma série antes de finalizar.'); return; }
@@ -38,57 +24,68 @@ export default function WorkoutView({ treino, filtros, setFiltros, onOpen, onToa
       return { id: ex.id, nome: ex.nome, series: (checks[ex.id] || []).slice(0, n).filter(Boolean).length, kg: at.kg ?? null, reps: at.reps ?? null };
     });
     dispatch({ type: 'finalizar', treino, itens });
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-    onToast(`Treino ${treino} salvo no histórico! Próximo: Treino ${{ A: 'B', B: 'C', C: 'A' }[treino]}.`);
+    onToast(`Treino ${treino} concluído! Próximo: Treino ${NEXT[treino]}.`);
+    onBack();
   };
 
   return (
     <div className="space-y-3">
       <div className="sticky top-[var(--header-h)] z-20 -mx-4 border-b border-line bg-bg/95 px-4 pb-3 pt-2 backdrop-blur">
-        <div className="flex items-end justify-between gap-2">
-          <div className="min-w-0">
-            <h2 className="truncate text-xl font-black text-white">Treino {treino} · {info.titulo}</h2>
-            <p className="truncate text-sm text-muted">{info.foco}</p>
+        <div className="flex items-center gap-1">
+          <button type="button" onClick={onBack} className="-ml-2 flex h-11 w-11 shrink-0 items-center justify-center rounded-full text-white active:bg-line" aria-label="Voltar para os treinos">
+            <ArrowLeft size={22} />
+          </button>
+          <div className="min-w-0 flex-1">
+            <p className="text-xs font-bold uppercase tracking-wide text-accent">Treino {treino}</p>
+            <h2 className="text-lg font-black leading-tight text-white">{info.nome}</h2>
+            <p className="text-xs text-muted">{feitas} de {total} séries · nível {NIVEIS[state.nivel]}</p>
           </div>
-          <span className="text-2xl font-black tabular-nums text-accent" aria-hidden="true">{pct}%</span>
+          <span className="pl-2 text-xl font-black tabular-nums text-accent" aria-hidden="true">{pct}%</span>
         </div>
-        <div className="mt-2 h-3 overflow-hidden rounded-full bg-line" role="progressbar" aria-valuenow={pct} aria-valuemin={0} aria-valuemax={100} aria-label="Progresso do treino">
+        <div className="mt-2 h-2 overflow-hidden rounded-full bg-line" role="progressbar" aria-valuenow={pct} aria-valuemin={0} aria-valuemax={100} aria-label="Progresso do treino">
           <div className={`h-full rounded-full transition-[width] duration-200 ${pct === 100 ? 'bg-success' : 'bg-accent'}`} style={{ width: `${pct}%` }} />
         </div>
-        <p className="mt-1 text-xs text-muted">{feitas} de {total} séries</p>
-      </div>
-
-      {sugerido === treino && !emAndamento && (
-        <p className="flex items-center gap-2 rounded-xl bg-accent/10 p-3 text-sm font-semibold text-accent">
-          <Sparkles size={18} aria-hidden="true" /> Este é o próximo treino da sua sequência.
-        </p>
-      )}
-
-      <Filters value={filtros} onChange={setFiltros} total={slots.length} mostrados={visiveis.length} />
-
-      {visiveis.length === 0 ? (
-        <p className="rounded-2xl border border-dashed border-line p-6 text-center text-muted">
-          Nenhum exercício deste treino bate com os filtros. Tente limpar a busca ou procure na aba Biblioteca.
-        </p>
-      ) : (
-        <div className="space-y-3">
-          {visiveis.map(({ slotId, ex, extra }) => (
-            <ExerciseCard
-              key={slotId}
-              ex={ex}
-              slotId={slotId}
-              treino={treino}
-              ordem={slots.findIndex((s) => s.slotId === slotId) + 1}
-              extra={extra}
-              onOpen={(e, sid, swap) => onOpen(extra ? { ex: e } : { ex: e, slotId: sid, treino, swap })}
-              onRemove={(e) => { dispatch({ type: 'removeExtra', treino, id: e.id }); onToast(`${e.nome} removido do Treino ${treino}.`); }}
-            />
+        {/* troca rápida entre treinos sem voltar à tela inicial */}
+        <div className="mt-3 grid grid-cols-3 gap-1 rounded-xl bg-card p-1" role="tablist" aria-label="Escolher treino">
+          {['A', 'B', 'C'].map((t) => (
+            <button
+              key={t}
+              type="button"
+              role="tab"
+              aria-selected={t === treino}
+              onClick={() => onSwitch(t)}
+              className={`relative h-9 rounded-lg text-sm font-bold transition-colors ${t === treino ? 'bg-line text-white' : 'text-muted'}`}
+            >
+              Treino {t}
+              {t === proximo && t !== treino && <span className="absolute right-2 top-1.5 h-1.5 w-1.5 rounded-full bg-accent" aria-label="próximo" />}
+            </button>
           ))}
         </div>
+      </div>
+
+      {proximo === treino && feitas === 0 && (
+        <p className="flex items-center gap-2 text-sm font-semibold text-accent">
+          <Sparkles size={16} aria-hidden="true" /> Este é o seu próximo treino.
+        </p>
       )}
 
-      <button type="button" onClick={onAddExercise} className="flex h-12 w-full items-center justify-center gap-2 rounded-2xl border border-dashed border-accent/50 font-bold text-accent active:bg-accent/10">
-        <Plus size={18} aria-hidden="true" /> Adicionar exercício da Biblioteca
+      <div className="space-y-3">
+        {slots.map(({ slotId, ex, extra }, i) => (
+          <ExerciseCard
+            key={slotId}
+            ex={ex}
+            slotId={slotId}
+            treino={treino}
+            ordem={i + 1}
+            extra={extra}
+            onOpen={(e, sid, swap) => onOpen(extra ? { ex: e } : { ex: e, slotId: sid, treino, swap })}
+            onRemove={(e) => { dispatch({ type: 'removeExtra', treino, id: e.id }); onToast(`${e.nome} removido do Treino ${treino}.`); }}
+          />
+        ))}
+      </div>
+
+      <button type="button" onClick={onAddExercise} className="flex h-12 w-full items-center justify-center gap-2 rounded-2xl text-sm font-bold text-accent active:bg-accent/10">
+        <Plus size={18} aria-hidden="true" /> Adicionar exercício
       </button>
 
       <button type="button" onClick={finalizar} className={`flex h-14 w-full items-center justify-center gap-2 rounded-2xl text-lg font-black ${pct === 100 ? 'bg-success text-bg' : 'border border-line bg-card text-white'}`}>

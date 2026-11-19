@@ -1,4 +1,5 @@
-import { Search, X } from 'lucide-react';
+import { useState } from 'react';
+import { SlidersHorizontal, Search, X } from 'lucide-react';
 import { EQUIPAMENTOS, EQUIP_FILTRO, GRUPOS_FILTRO, GRUPOS_SECUNDARIOS, MUSCULOS, grupoDe } from '../lib/labels.js';
 import { normalize } from '../lib/text.js';
 
@@ -29,7 +30,7 @@ function Chip({ ativo, onClick, children }) {
       type="button"
       onClick={onClick}
       aria-pressed={ativo}
-      className={`h-10 shrink-0 rounded-full border px-4 text-sm font-semibold transition-colors ${
+      className={`h-10 shrink-0 rounded-full border px-3.5 text-sm font-semibold transition-colors ${
         ativo ? 'border-accent bg-accent text-bg' : 'border-line bg-card text-white active:border-accent'
       }`}
     >
@@ -39,12 +40,15 @@ function Chip({ ativo, onClick, children }) {
 }
 
 export default function Filters({ value, onChange, total, mostrados }) {
+  const nAtivos = value.grupos.length + value.equip.length;
+  const [aberto, setAberto] = useState(nAtivos > 0);
   const toggle = (campo, v) =>
     onChange({ ...value, [campo]: value[campo].includes(v) ? value[campo].filter((x) => x !== v) : [...value[campo], v] });
 
   return (
     <div className="space-y-2">
-      <label className="relative block">
+      <div className="flex gap-2">
+      <label className="relative block min-w-0 flex-1">
         <span className="sr-only">Buscar exercício por nome</span>
         <Search className="pointer-events-none absolute left-3 top-1/2 -translate-y-1/2 text-muted" size={18} aria-hidden="true" />
         <input
@@ -60,17 +64,31 @@ export default function Filters({ value, onChange, total, mostrados }) {
           </button>
         )}
       </label>
+      <button
+        type="button"
+        onClick={() => setAberto((a) => !a)}
+        aria-expanded={aberto}
+        className={`relative flex h-12 shrink-0 items-center gap-1.5 rounded-xl border px-3 text-sm font-semibold ${aberto || nAtivos ? 'border-accent text-accent' : 'border-line bg-card text-white'}`}
+      >
+        <SlidersHorizontal size={18} aria-hidden="true" /> Filtros
+        {nAtivos > 0 && <span className="flex h-5 min-w-5 items-center justify-center rounded-full bg-accent px-1 text-xs font-bold text-bg">{nAtivos}</span>}
+      </button>
+      </div>
 
-      <div className="no-scrollbar -mx-4 flex gap-2 overflow-x-auto px-4" role="group" aria-label="Filtrar por grupo muscular">
+      {aberto && <>
+      <p className="pt-1 text-xs font-semibold text-muted">Músculo</p>
+      <div className="flex flex-wrap gap-2" role="group" aria-label="Filtrar por grupo muscular">
         {GRUPOS_FILTRO.map((g) => (
           <Chip key={g} ativo={value.grupos.includes(g)} onClick={() => toggle('grupos', g)}>{MUSCULOS[g]}</Chip>
         ))}
       </div>
-      <div className="no-scrollbar -mx-4 flex gap-2 overflow-x-auto px-4" role="group" aria-label="Filtrar por equipamento">
+      <p className="pt-1 text-xs font-semibold text-muted">Equipamento</p>
+      <div className="flex flex-wrap gap-2" role="group" aria-label="Filtrar por equipamento">
         {EQUIP_FILTRO.map((e) => (
           <Chip key={e} ativo={value.equip.includes(e)} onClick={() => toggle('equip', e)}>{EQUIPAMENTOS[e]}</Chip>
         ))}
       </div>
+      </>}
 
       <div className="flex h-8 items-center justify-between text-sm">
         <span className="text-muted" aria-live="polite">
