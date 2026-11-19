@@ -1,5 +1,5 @@
 import { Search, X } from 'lucide-react';
-import { EQUIPAMENTOS, EQUIP_FILTRO, GRUPOS_FILTRO, MUSCULOS, grupoDe } from '../lib/labels.js';
+import { EQUIPAMENTOS, EQUIP_FILTRO, GRUPOS_FILTRO, GRUPOS_SECUNDARIOS, MUSCULOS, grupoDe } from '../lib/labels.js';
 import { normalize } from '../lib/text.js';
 
 export const FILTROS_VAZIOS = { busca: '', grupos: [], equip: [] };
@@ -13,9 +13,10 @@ export function aplicarFiltros(lista, f, buscaDebounced) {
     const ex = item.ex || item;
     if (q && !normalize(ex.nome).includes(q)) return false;
     if (f.grupos.length) {
-      const gs = [ex.musculoPrincipal, ...(ex.musculosSecundarios || [])].map(grupoDe);
-      // o grupo principal decide; secundários entram só para glúteos e abdômen, que raramente são principais
-      if (!f.grupos.includes(grupoDe(ex.musculoPrincipal)) && !f.grupos.some((g) => ['gluteos', 'abdomen'].includes(g) && gs.includes(g))) return false;
+      const sec = (ex.musculosSecundarios || []).map(grupoDe);
+      const principal = f.grupos.includes(grupoDe(ex.musculoPrincipal));
+      const porSecundario = f.grupos.some((g) => GRUPOS_SECUNDARIOS.includes(g) && sec.includes(g));
+      if (!principal && !porSecundario) return false;
     }
     if (f.equip.length && !f.equip.includes(ex.equipamento)) return false;
     return true;

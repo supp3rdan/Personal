@@ -55,8 +55,8 @@ export default function ExerciseMedia({ ex, large = false, tryGif = false, class
   const skeleton = showFrames && !loaded[0];
 
   return (
-    <div className={`relative overflow-hidden bg-white ${className}`}>
-      {skeleton && <div className="absolute inset-0 animate-pulse bg-line" aria-hidden="true" />}
+    <div className={`relative overflow-hidden ${(showFrames && loaded[0]) || showGif ? 'bg-white' : 'bg-line'} ${className}`}>
+      {skeleton && <div className="absolute inset-0 animate-pulse bg-card" aria-hidden="true" />}
 
       {showFrames && frames.map((src, i) => (
         <img

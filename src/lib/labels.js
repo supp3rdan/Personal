@@ -15,11 +15,14 @@ export const MUSCULOS = {
   adutores: 'Adutores',
   lombar: 'Lombar',
   pescoco: 'Pescoço',
+  obliquos: 'Oblíquos',
 };
 
 // Grupos exibidos no filtro; músculos menores caem no grupo mais próximo
-export const GRUPOS_FILTRO = ['peito', 'costas', 'quadriceps', 'posteriores', 'gluteos', 'ombros', 'biceps', 'triceps', 'abdomen', 'panturrilhas'];
-const GRUPO_DE = { trapezio: 'costas', lombar: 'costas', antebraco: 'biceps', abdutores: 'gluteos', adutores: 'quadriceps', pescoco: 'ombros' };
+export const GRUPOS_FILTRO = ['peito', 'costas', 'ombros', 'biceps', 'triceps', 'antebraco', 'trapezio', 'abdomen', 'lombar', 'quadriceps', 'posteriores', 'gluteos', 'adutores', 'panturrilhas'];
+const GRUPO_DE = { abdutores: 'gluteos', obliquos: 'abdomen', pescoco: 'ombros' };
+// grupos que raramente são o músculo principal: também aparecem quando são secundários
+export const GRUPOS_SECUNDARIOS = ['gluteos', 'abdomen', 'trapezio', 'antebraco', 'lombar', 'adutores'];
 export const grupoDe = (m) => GRUPO_DE[m] || m;
 
 export const EQUIPAMENTOS = {

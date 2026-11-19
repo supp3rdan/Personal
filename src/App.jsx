@@ -102,7 +102,7 @@ export default function App() {
       <main className="px-4 pb-[calc(9rem+env(safe-area-inset-bottom))]">
         {aba === 'biblioteca'
           ? <LibraryView filtros={filtros} setFiltros={setFiltros} onOpen={setDetalhe} />
-          : <WorkoutView key={`${state.perfil}-${aba}`} treino={aba} filtros={filtros} setFiltros={setFiltros} onOpen={setDetalhe} onToast={showToast} />}
+          : <WorkoutView key={`${state.perfil}-${aba}`} treino={aba} filtros={filtros} setFiltros={setFiltros} onOpen={setDetalhe} onToast={showToast} onAddExercise={() => { trocarAba('biblioteca'); showToast(`Abra um exercício e toque em "Treino ${aba}" para adicionar.`); }} />}
 
         <p className="mt-8 text-center text-xs text-muted">
           Este app não substitui a orientação de um profissional de Educação Física.

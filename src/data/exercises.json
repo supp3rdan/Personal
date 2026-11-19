@@ -25,7 +25,8 @@
     "dicaSeguranca": "Escápulas retraídas e glúteo no banco o tempo todo. Use um parceiro ou travas de segurança em cargas altas.",
     "alternativas": [
       "supino-reto-halteres",
-      "supino-maquina"
+      "supino-maquina",
+      "supino-declinado-barra"
     ],
     "apiRefs": {
       "freeExerciseDb": "Barbell_Bench_Press_-_Medium_Grip",
@@ -124,7 +125,8 @@
     "dicaSeguranca": "Inclinação acima de 45° transfere o trabalho para o ombro. Mantenha as escápulas apoiadas no banco.",
     "alternativas": [
       "supino-inclinado-barra",
-      "supino-maquina"
+      "supino-maquina",
+      "supino-inclinado-maquina"
     ],
     "apiRefs": {
       "freeExerciseDb": "Incline_Dumbbell_Press",
@@ -188,7 +190,8 @@
     "dicaSeguranca": "Não desça além da linha dos ombros. O cotovelo fica fixo: é um abraço, não um supino.",
     "alternativas": [
       "crossover",
-      "peck-deck"
+      "peck-deck",
+      "crucifixo-inclinado"
     ],
     "apiRefs": {
       "freeExerciseDb": "Dumbbell_Flyes",
@@ -220,7 +223,8 @@
     "dicaSeguranca": "Cotovelos levemente flexionados e fixos. Não deixe a polia puxar os ombros para trás no retorno.",
     "alternativas": [
       "peck-deck",
-      "crucifixo-halteres"
+      "crucifixo-halteres",
+      "crossover-baixo"
     ],
     "apiRefs": {
       "freeExerciseDb": "Cable_Crossover",
@@ -318,7 +322,8 @@
     "dicaSeguranca": "Costas apoiadas no encosto e abdômen firme. Não arqueie a lombar para subir a carga.",
     "alternativas": [
       "desenvolvimento-maquina",
-      "desenvolvimento-barra"
+      "desenvolvimento-barra",
+      "desenvolvimento-arnold"
     ],
     "apiRefs": {
       "freeExerciseDb": "Dumbbell_Shoulder_Press",
@@ -413,7 +418,8 @@
     "dicaSeguranca": "Não use impulso do tronco. Pare na linha do ombro e mantenha os ombros longe das orelhas.",
     "alternativas": [
       "elevacao-lateral-polia",
-      "desenvolvimento-halteres"
+      "desenvolvimento-halteres",
+      "remada-alta-polia"
     ],
     "apiRefs": {
       "freeExerciseDb": "Side_Lateral_Raise",
@@ -509,7 +515,8 @@
     "dicaSeguranca": "Cotovelos na altura dos ombros ou acima. Ótimo para saúde dos ombros: priorize a execução, não a carga.",
     "alternativas": [
       "crucifixo-inverso",
-      "crucifixo-inverso-maquina"
+      "crucifixo-inverso-maquina",
+      "crucifixo-inverso-polia"
     ],
     "apiRefs": {
       "freeExerciseDb": "Face_Pull",
@@ -605,7 +612,9 @@
     "dicaSeguranca": "Só o antebraço se mexe: cotovelos fixos ao lado do tronco. Não incline o corpo sobre a carga.",
     "alternativas": [
       "triceps-pulley",
-      "triceps-frances"
+      "triceps-frances",
+      "triceps-unilateral-polia",
+      "triceps-coice"
     ],
     "apiRefs": {
       "freeExerciseDb": "Triceps_Pushdown_-_Rope_Attachment",
@@ -665,7 +674,8 @@
     "dicaSeguranca": "Movimento lento perto do rosto. Se sentir dor no cotovelo, troque pelo tríceps na polia.",
     "alternativas": [
       "triceps-frances",
-      "triceps-corda"
+      "triceps-corda",
+      "triceps-frances-halter"
     ],
     "apiRefs": {
       "freeExerciseDb": "EZ-Bar_Skullcrusher",
@@ -827,7 +837,8 @@
     "dicaSeguranca": "Sem balanço. Se ainda não completar as repetições, use a barra assistida ou a puxada na frente.",
     "alternativas": [
       "puxada-frente",
-      "puxada-triangulo"
+      "puxada-triangulo",
+      "barra-supinada"
     ],
     "apiRefs": {
       "freeExerciseDb": "Pullups",
@@ -860,7 +871,9 @@
     "dicaSeguranca": "Puxe com as costas, não com os braços: pense em levar os cotovelos ao bolso. Nunca puxe atrás da nuca.",
     "alternativas": [
       "barra-fixa",
-      "puxada-triangulo"
+      "puxada-triangulo",
+      "puxada-supinada",
+      "puxada-unilateral"
     ],
     "apiRefs": {
       "freeExerciseDb": "Wide-Grip_Lat_Pulldown",
@@ -926,7 +939,9 @@
     "dicaSeguranca": "Coluna neutra o tempo todo: se a lombar arredondar, reduza a carga. Abdômen ativado.",
     "alternativas": [
       "remada-unilateral",
-      "remada-baixa"
+      "remada-baixa",
+      "remada-cavalinho",
+      "remada-apoiada"
     ],
     "apiRefs": {
       "freeExerciseDb": "Bent_Over_Barbell_Row",
@@ -992,7 +1007,8 @@
     "dicaSeguranca": "Tronco quase parado: não use o balanço das costas para puxar.",
     "alternativas": [
       "remada-maquina",
-      "remada-unilateral"
+      "remada-unilateral",
+      "remada-invertida"
     ],
     "apiRefs": {
       "freeExerciseDb": "Seated_Cable_Rows",
@@ -1087,7 +1103,9 @@
     ],
     "dicaSeguranca": "Não gire os ombros. Movimento só para cima e para baixo, com o pescoço neutro.",
     "alternativas": [
-      "encolhimento-halteres"
+      "encolhimento-halteres",
+      "encolhimento-polia",
+      "encolhimento-maquina"
     ],
     "apiRefs": {
       "freeExerciseDb": "Barbell_Shrug",
@@ -1150,7 +1168,9 @@
     "dicaSeguranca": "Não balance o tronco. Se a lombar compensar, reduza a carga.",
     "alternativas": [
       "rosca-alternada",
-      "rosca-scott"
+      "rosca-scott",
+      "rosca-barra-w",
+      "rosca-polia"
     ],
     "apiRefs": {
       "freeExerciseDb": "Barbell_Curl",
@@ -1182,7 +1202,9 @@
     "dicaSeguranca": "Cotovelo fixo ao lado do corpo. Não leve o ombro para frente.",
     "alternativas": [
       "rosca-direta",
-      "rosca-scott"
+      "rosca-scott",
+      "rosca-inclinada",
+      "rosca-concentrada"
     ],
     "apiRefs": {
       "freeExerciseDb": "Dumbbell_Bicep_Curl",
@@ -1214,7 +1236,8 @@
     "dicaSeguranca": "Ótimo para braquial e antebraço. Sem impulso do tronco.",
     "alternativas": [
       "rosca-alternada",
-      "rosca-direta"
+      "rosca-direta",
+      "rosca-martelo-corda"
     ],
     "apiRefs": {
       "freeExerciseDb": "Hammer_Curls",
@@ -1275,7 +1298,9 @@
     ],
     "dicaSeguranca": "Use carga leve e amplitude total. Pare se sentir dor no punho.",
     "alternativas": [
-      "rosca-martelo"
+      "rosca-martelo",
+      "rosca-punho-inversa",
+      "rosca-inversa"
     ],
     "apiRefs": {
       "freeExerciseDb": "Palms-Up_Barbell_Wrist_Curl_Over_A_Bench",
@@ -1310,7 +1335,8 @@
     "alternativas": [
       "agachamento-smith",
       "agachamento-hack",
-      "agachamento-goblet"
+      "agachamento-goblet",
+      "agachamento-frontal"
     ],
     "apiRefs": {
       "freeExerciseDb": "Barbell_Full_Squat",
@@ -1441,7 +1467,8 @@
     "dicaSeguranca": "Não deixe o quadril sair do banco na descida: isso arredonda a lombar.",
     "alternativas": [
       "agachamento-hack",
-      "agachamento-smith"
+      "agachamento-smith",
+      "leg-press-fechado"
     ],
     "apiRefs": {
       "freeExerciseDb": "Leg_Press",
@@ -1504,7 +1531,9 @@
     "dicaSeguranca": "Tronco ereto e joelho da frente alinhado com o pé. Passos mais longos trabalham mais glúteo.",
     "alternativas": [
       "afundo-bulgaro",
-      "avanco-reverso"
+      "avanco-reverso",
+      "subida-banco",
+      "passada-barra"
     ],
     "apiRefs": {
       "freeExerciseDb": "Dumbbell_Lunges",
@@ -1602,7 +1631,9 @@
     "dicaSeguranca": "Coluna neutra do começo ao fim: a amplitude termina onde a lombar começaria a arredondar.",
     "alternativas": [
       "stiff-barra",
-      "stiff-halteres"
+      "stiff-halteres",
+      "stiff-unilateral",
+      "good-morning"
     ],
     "apiRefs": {
       "freeExerciseDb": "Romanian_Deadlift",
@@ -1700,7 +1731,8 @@
     "dicaSeguranca": "Quadril colado ao banco: se ele subir, a carga está alta demais.",
     "alternativas": [
       "cadeira-flexora",
-      "stiff-halteres"
+      "stiff-halteres",
+      "flexao-nordica"
     ],
     "apiRefs": {
       "freeExerciseDb": "Lying_Leg_Curls",
@@ -1763,7 +1795,9 @@
     "dicaSeguranca": "Queixo levemente para baixo e costelas fechadas: não hiperestenda a lombar no topo.",
     "alternativas": [
       "ponte-gluteo",
-      "gluteo-quatro-apoios"
+      "gluteo-quatro-apoios",
+      "pull-through",
+      "ponte-unilateral"
     ],
     "apiRefs": {
       "freeExerciseDb": "Barbell_Hip_Thrust",
@@ -1826,7 +1860,8 @@
     "dicaSeguranca": "Não arqueie a lombar ao subir: o movimento vem do quadril. Pode usar caneleira ou a polia.",
     "alternativas": [
       "elevacao-pelvica",
-      "cadeira-abdutora"
+      "cadeira-abdutora",
+      "gluteo-polia"
     ],
     "apiRefs": {
       "freeExerciseDb": "Glute_Kickback",
@@ -1857,7 +1892,8 @@
     ],
     "dicaSeguranca": "Inclinar levemente o tronco à frente enfatiza o glúteo médio.",
     "alternativas": [
-      "gluteo-quatro-apoios"
+      "gluteo-quatro-apoios",
+      "gluteo-polia"
     ],
     "apiRefs": {
       "freeExerciseDb": "Thigh_Abductor",
@@ -1887,7 +1923,9 @@
     "dicaSeguranca": "Pausar embaixo elimina o efeito mola do tendão e faz o músculo trabalhar. Joelhos estendidos, sem travar.",
     "alternativas": [
       "panturrilha-leg-press",
-      "panturrilha-sentado"
+      "panturrilha-sentado",
+      "panturrilha-halter",
+      "panturrilha-smith"
     ],
     "apiRefs": {
       "freeExerciseDb": "Standing_Calf_Raises",
@@ -1977,7 +2015,9 @@
     "dicaSeguranca": "Não puxe o pescoço com as mãos. Olhe para o teto e mantenha a lombar no chão.",
     "alternativas": [
       "abdominal-polia",
-      "prancha"
+      "prancha",
+      "abdominal-obliquo",
+      "dead-bug"
     ],
     "apiRefs": {
       "freeExerciseDb": "Crunches",
@@ -2039,7 +2079,9 @@
     "dicaSeguranca": "Não deixe o quadril cair nem subir demais. Contraia glúteos e abdômen.",
     "alternativas": [
       "pallof",
-      "abdominal-crunch"
+      "abdominal-crunch",
+      "prancha-lateral",
+      "roda-abdominal"
     ],
     "apiRefs": {
       "freeExerciseDb": "Plank",
@@ -2071,7 +2113,9 @@
     "dicaSeguranca": "Iniciantes: faça com joelhos flexionados ou no apoio de paralelas.",
     "alternativas": [
       "abdominal-infra",
-      "abdominal-polia"
+      "abdominal-polia",
+      "abdominal-reverso",
+      "elevacao-pernas-banco"
     ],
     "apiRefs": {
       "freeExerciseDb": "Hanging_Leg_Raise",
@@ -2135,6 +2179,2241 @@
     "apiRefs": {
       "freeExerciseDb": "Pallof_Press",
       "exerciseDbName": "cable pallof press"
+    }
+  },
+  {
+    "id": "supino-declinado-barra",
+    "nome": "Supino Declinado com Barra",
+    "musculoPrincipal": "peito",
+    "musculosSecundarios": [
+      "triceps",
+      "ombros"
+    ],
+    "equipamento": "barra",
+    "tipo": "multiarticular",
+    "prescricao": {
+      "series": 3,
+      "repsMin": 8,
+      "repsMax": 10,
+      "descansoSeg": 120
+    },
+    "cadencia": "2-1-1 — pause no peito",
+    "passos": [
+      "Prenda as pernas no banco declinado e deite.",
+      "Retire a barra com pegada pouco além dos ombros.",
+      "Desça até a parte baixa do peito e empurre de volta."
+    ],
+    "dicaSeguranca": "Use as travas ou um parceiro: sair do banco declinado com a barra é difícil.",
+    "alternativas": [
+      "supino-declinado-halteres",
+      "mergulho-peito"
+    ],
+    "apiRefs": {
+      "freeExerciseDb": "Decline_Barbell_Bench_Press",
+      "exerciseDbName": "barbell decline bench press"
+    }
+  },
+  {
+    "id": "supino-declinado-halteres",
+    "nome": "Supino Declinado com Halteres",
+    "musculoPrincipal": "peito",
+    "musculosSecundarios": [
+      "triceps",
+      "ombros"
+    ],
+    "equipamento": "halteres",
+    "tipo": "multiarticular",
+    "prescricao": {
+      "series": 3,
+      "repsMin": 10,
+      "repsMax": 12,
+      "descansoSeg": 90
+    },
+    "cadencia": "3-0-1 — controle a descida",
+    "passos": [
+      "Deite no banco declinado com os halteres sobre o peito.",
+      "Desça abrindo os cotovelos a cerca de 45°.",
+      "Empurre de volta aproximando os halteres."
+    ],
+    "dicaSeguranca": "Peça ajuda para posicionar os halteres antes de deitar.",
+    "alternativas": [
+      "supino-declinado-barra",
+      "mergulho-peito"
+    ],
+    "apiRefs": {
+      "freeExerciseDb": "Decline_Dumbbell_Bench_Press",
+      "exerciseDbName": "dumbbell decline bench press"
+    }
+  },
+  {
+    "id": "supino-inclinado-maquina",
+    "nome": "Supino Inclinado na Máquina",
+    "musculoPrincipal": "peito",
+    "musculosSecundarios": [
+      "ombros",
+      "triceps"
+    ],
+    "equipamento": "maquina",
+    "tipo": "multiarticular",
+    "prescricao": {
+      "series": 3,
+      "repsMin": 10,
+      "repsMax": 12,
+      "descansoSeg": 90
+    },
+    "cadencia": "2-0-2 — movimento contínuo",
+    "passos": [
+      "Ajuste o banco para as manoplas ficarem na parte alta do peito.",
+      "Empurre até quase estender os cotovelos.",
+      "Volte devagar até sentir o alongamento."
+    ],
+    "dicaSeguranca": "Costas apoiadas e ombros longe das orelhas.",
+    "alternativas": [
+      "supino-inclinado-halteres",
+      "supino-inclinado-smith"
+    ],
+    "apiRefs": {
+      "freeExerciseDb": "Leverage_Incline_Chest_Press",
+      "exerciseDbName": "lever incline chest press"
+    }
+  },
+  {
+    "id": "supino-inclinado-smith",
+    "nome": "Supino Inclinado no Smith",
+    "musculoPrincipal": "peito",
+    "musculosSecundarios": [
+      "ombros",
+      "triceps"
+    ],
+    "equipamento": "maquina",
+    "tipo": "multiarticular",
+    "prescricao": {
+      "series": 3,
+      "repsMin": 8,
+      "repsMax": 12,
+      "descansoSeg": 90
+    },
+    "cadencia": "2-1-1 — pause leve no peito",
+    "passos": [
+      "Posicione o banco inclinado sob a barra do Smith.",
+      "Destrave e desça até a parte alta do peito.",
+      "Empurre de volta e trave a barra ao terminar."
+    ],
+    "dicaSeguranca": "Confira se a barra desce sobre a parte alta do peito, não sobre o pescoço.",
+    "alternativas": [
+      "supino-inclinado-maquina",
+      "supino-inclinado-barra"
+    ],
+    "apiRefs": {
+      "freeExerciseDb": "Smith_Machine_Incline_Bench_Press",
+      "exerciseDbName": "smith incline bench press"
+    }
+  },
+  {
+    "id": "crucifixo-inclinado",
+    "nome": "Crucifixo Inclinado com Halteres",
+    "musculoPrincipal": "peito",
+    "musculosSecundarios": [
+      "ombros"
+    ],
+    "equipamento": "halteres",
+    "tipo": "isolador",
+    "prescricao": {
+      "series": 3,
+      "repsMin": 10,
+      "repsMax": 15,
+      "descansoSeg": 60
+    },
+    "cadencia": "3-0-2 — alongue devagar",
+    "passos": [
+      "Deite no banco a 30° com os halteres acima do peito.",
+      "Abra os braços em arco com os cotovelos levemente flexionados.",
+      "Feche o arco contraindo a parte alta do peito."
+    ],
+    "dicaSeguranca": "Não desça além da linha dos ombros.",
+    "alternativas": [
+      "crossover-baixo",
+      "crucifixo-halteres"
+    ],
+    "apiRefs": {
+      "freeExerciseDb": "Incline_Dumbbell_Flyes",
+      "exerciseDbName": "dumbbell incline fly"
+    }
+  },
+  {
+    "id": "crossover-baixo",
+    "nome": "Crossover de Baixo para Cima",
+    "musculoPrincipal": "peito",
+    "musculosSecundarios": [
+      "ombros"
+    ],
+    "equipamento": "maquina",
+    "tipo": "isolador",
+    "prescricao": {
+      "series": 3,
+      "repsMin": 12,
+      "repsMax": 15,
+      "descansoSeg": 60
+    },
+    "cadencia": "2-1-2 — segure em cima",
+    "passos": [
+      "Ajuste as polias embaixo e segure uma em cada mão.",
+      "Traga as mãos em arco até a altura do peito.",
+      "Volte devagar até os braços abrirem."
+    ],
+    "dicaSeguranca": "Foca a parte alta do peito. Cotovelos levemente flexionados e fixos.",
+    "alternativas": [
+      "crucifixo-inclinado",
+      "crossover"
+    ],
+    "apiRefs": {
+      "freeExerciseDb": "Low_Cable_Crossover",
+      "exerciseDbName": "cable low fly"
+    }
+  },
+  {
+    "id": "mergulho-peito",
+    "nome": "Mergulho para Peitoral",
+    "musculoPrincipal": "peito",
+    "musculosSecundarios": [
+      "triceps",
+      "ombros"
+    ],
+    "equipamento": "peso-corporal",
+    "tipo": "multiarticular",
+    "prescricao": {
+      "series": 3,
+      "repsMin": 6,
+      "repsMax": 12,
+      "descansoSeg": 90
+    },
+    "cadencia": "2-0-1 — incline o tronco",
+    "passos": [
+      "Apoie-se nas paralelas com os braços estendidos.",
+      "Incline o tronco à frente e abra levemente os cotovelos.",
+      "Desça até cerca de 90° e empurre de volta."
+    ],
+    "dicaSeguranca": "Pare se sentir a frente do ombro. Use a máquina assistida se precisar.",
+    "alternativas": [
+      "supino-declinado-halteres",
+      "mergulho-paralelas"
+    ],
+    "apiRefs": {
+      "freeExerciseDb": "Dips_-_Chest_Version",
+      "exerciseDbName": "chest dip"
+    }
+  },
+  {
+    "id": "pullover-halter",
+    "nome": "Pullover com Halter",
+    "musculoPrincipal": "peito",
+    "musculosSecundarios": [
+      "costas",
+      "triceps"
+    ],
+    "equipamento": "halteres",
+    "tipo": "isolador",
+    "prescricao": {
+      "series": 3,
+      "repsMin": 10,
+      "repsMax": 12,
+      "descansoSeg": 60
+    },
+    "cadencia": "3-0-2 — alongue atrás da cabeça",
+    "passos": [
+      "Deite com as costas no banco e segure um halter acima do peito com as duas mãos.",
+      "Leve o halter em arco para trás da cabeça com os cotovelos levemente flexionados.",
+      "Volte o halter acima do peito."
+    ],
+    "dicaSeguranca": "Vá só até onde o ombro permitir sem dor. Mantenha o abdômen firme.",
+    "alternativas": [
+      "crucifixo-halteres",
+      "pulldown-braco-estendido"
+    ],
+    "apiRefs": {
+      "freeExerciseDb": "Bent-Arm_Dumbbell_Pullover",
+      "exerciseDbName": "dumbbell pullover"
+    }
+  },
+  {
+    "id": "desenvolvimento-arnold",
+    "nome": "Desenvolvimento Arnold",
+    "musculoPrincipal": "ombros",
+    "musculosSecundarios": [
+      "triceps"
+    ],
+    "equipamento": "halteres",
+    "tipo": "multiarticular",
+    "prescricao": {
+      "series": 3,
+      "repsMin": 8,
+      "repsMax": 12,
+      "descansoSeg": 90
+    },
+    "cadencia": "2-0-2 — gire durante a subida",
+    "passos": [
+      "Sente com os halteres na frente do rosto, palmas voltadas para você.",
+      "Suba girando as palmas para frente.",
+      "Desça desfazendo o giro."
+    ],
+    "dicaSeguranca": "Use carga menor que no desenvolvimento comum. Costas apoiadas.",
+    "alternativas": [
+      "desenvolvimento-halteres",
+      "desenvolvimento-maquina"
+    ],
+    "apiRefs": {
+      "freeExerciseDb": "Arnold_Dumbbell_Press",
+      "exerciseDbName": "dumbbell arnold press"
+    }
+  },
+  {
+    "id": "desenvolvimento-militar-pe",
+    "nome": "Desenvolvimento Militar em Pé",
+    "musculoPrincipal": "ombros",
+    "musculosSecundarios": [
+      "triceps",
+      "abdomen"
+    ],
+    "equipamento": "barra",
+    "tipo": "multiarticular",
+    "prescricao": {
+      "series": 4,
+      "repsMin": 6,
+      "repsMax": 8,
+      "descansoSeg": 120
+    },
+    "cadencia": "2-0-1 — barra passa rente ao rosto",
+    "passos": [
+      "Em pé, barra apoiada na clavícula com pegada pouco além dos ombros.",
+      "Contraia glúteos e abdômen.",
+      "Empurre a barra acima da cabeça e desça até a clavícula."
+    ],
+    "dicaSeguranca": "Não incline o tronco para trás. Se a lombar arquear, reduza a carga.",
+    "alternativas": [
+      "desenvolvimento-barra",
+      "desenvolvimento-halteres"
+    ],
+    "apiRefs": {
+      "freeExerciseDb": "Standing_Military_Press",
+      "exerciseDbName": "barbell standing military press"
+    }
+  },
+  {
+    "id": "remada-alta",
+    "nome": "Remada Alta com Barra",
+    "musculoPrincipal": "ombros",
+    "musculosSecundarios": [
+      "trapezio",
+      "biceps"
+    ],
+    "equipamento": "barra",
+    "tipo": "multiarticular",
+    "prescricao": {
+      "series": 3,
+      "repsMin": 10,
+      "repsMax": 12,
+      "descansoSeg": 60
+    },
+    "cadencia": "2-0-2 — cotovelos lideram",
+    "passos": [
+      "Em pé, segure a barra à frente das coxas com pegada na largura dos ombros.",
+      "Puxe a barra rente ao corpo até a altura do peito.",
+      "Desça devagar."
+    ],
+    "dicaSeguranca": "Não suba acima da linha dos ombros e use pegada mais aberta para poupar a articulação.",
+    "alternativas": [
+      "remada-alta-polia",
+      "elevacao-lateral"
+    ],
+    "apiRefs": {
+      "freeExerciseDb": "Upright_Barbell_Row",
+      "exerciseDbName": "barbell upright row"
+    }
+  },
+  {
+    "id": "remada-alta-polia",
+    "nome": "Remada Alta na Polia",
+    "musculoPrincipal": "ombros",
+    "musculosSecundarios": [
+      "trapezio"
+    ],
+    "equipamento": "maquina",
+    "tipo": "multiarticular",
+    "prescricao": {
+      "series": 3,
+      "repsMin": 12,
+      "repsMax": 15,
+      "descansoSeg": 60
+    },
+    "cadencia": "2-1-2 — tensão constante",
+    "passos": [
+      "Segure a barra na polia baixa com pegada na largura dos ombros.",
+      "Puxe até a altura do peito com os cotovelos acima das mãos.",
+      "Volte devagar."
+    ],
+    "dicaSeguranca": "Mesmos cuidados da remada alta: não passe da linha dos ombros.",
+    "alternativas": [
+      "remada-alta",
+      "elevacao-lateral-polia"
+    ],
+    "apiRefs": {
+      "freeExerciseDb": "Upright_Cable_Row",
+      "exerciseDbName": "cable upright row"
+    }
+  },
+  {
+    "id": "elevacao-frontal-polia",
+    "nome": "Elevação Frontal na Polia",
+    "musculoPrincipal": "ombros",
+    "musculosSecundarios": [
+      "peito"
+    ],
+    "equipamento": "maquina",
+    "tipo": "isolador",
+    "prescricao": {
+      "series": 3,
+      "repsMin": 12,
+      "repsMax": 15,
+      "descansoSeg": 45
+    },
+    "cadencia": "2-0-2 — sem balanço",
+    "passos": [
+      "De costas para a polia baixa, segure a manopla entre as pernas.",
+      "Eleve o braço estendido à frente até a altura do ombro.",
+      "Desça devagar."
+    ],
+    "dicaSeguranca": "Tronco parado. Carga moderada.",
+    "alternativas": [
+      "elevacao-frontal"
+    ],
+    "apiRefs": {
+      "freeExerciseDb": "Front_Cable_Raise",
+      "exerciseDbName": "cable front raise"
+    }
+  },
+  {
+    "id": "crucifixo-inverso-polia",
+    "nome": "Crucifixo Inverso na Polia",
+    "musculoPrincipal": "ombros",
+    "musculosSecundarios": [
+      "trapezio",
+      "costas"
+    ],
+    "equipamento": "maquina",
+    "tipo": "isolador",
+    "prescricao": {
+      "series": 3,
+      "repsMin": 12,
+      "repsMax": 15,
+      "descansoSeg": 45
+    },
+    "cadencia": "2-1-2 — abra até a linha do corpo",
+    "passos": [
+      "Ajuste as polias na altura dos ombros e cruze os cabos.",
+      "Segure com os braços à frente.",
+      "Abra os braços para trás até a linha do corpo e volte devagar."
+    ],
+    "dicaSeguranca": "Ombros para baixo. Movimento curto e controlado.",
+    "alternativas": [
+      "crucifixo-inverso",
+      "face-pull"
+    ],
+    "apiRefs": {
+      "freeExerciseDb": "Cable_Rear_Delt_Fly",
+      "exerciseDbName": "cable rear delt fly"
+    }
+  },
+  {
+    "id": "elevacao-lateral-sentado",
+    "nome": "Elevação Lateral Inclinado (Posterior)",
+    "musculoPrincipal": "ombros",
+    "musculosSecundarios": [
+      "trapezio"
+    ],
+    "equipamento": "halteres",
+    "tipo": "isolador",
+    "prescricao": {
+      "series": 3,
+      "repsMin": 12,
+      "repsMax": 15,
+      "descansoSeg": 45
+    },
+    "cadencia": "2-1-2 — pause em cima",
+    "passos": [
+      "Sente na ponta do banco e incline o tronco sobre as coxas.",
+      "Halteres pendurados atrás dos tornozelos.",
+      "Abra os braços para os lados até a linha dos ombros e desça devagar."
+    ],
+    "dicaSeguranca": "Pescoço neutro e sem impulso do tronco.",
+    "alternativas": [
+      "crucifixo-inverso",
+      "crucifixo-inverso-maquina"
+    ],
+    "apiRefs": {
+      "freeExerciseDb": "Seated_Bent-Over_Rear_Delt_Raise",
+      "exerciseDbName": "dumbbell rear lateral raise"
+    }
+  },
+  {
+    "id": "barra-supinada",
+    "nome": "Barra Fixa Supinada (Chin-up)",
+    "musculoPrincipal": "costas",
+    "musculosSecundarios": [
+      "biceps"
+    ],
+    "equipamento": "peso-corporal",
+    "tipo": "multiarticular",
+    "prescricao": {
+      "series": 3,
+      "repsMin": 6,
+      "repsMax": 10,
+      "descansoSeg": 120
+    },
+    "cadencia": "2-0-2 — desça até estender",
+    "passos": [
+      "Pendure-se com as palmas voltadas para você na largura dos ombros.",
+      "Puxe até o queixo passar a barra.",
+      "Desça controlando."
+    ],
+    "dicaSeguranca": "Mais fácil que a pronada e trabalha mais o bíceps. Sem balanço.",
+    "alternativas": [
+      "puxada-supinada",
+      "barra-fixa"
+    ],
+    "apiRefs": {
+      "freeExerciseDb": "Chin-Up",
+      "exerciseDbName": "chin-up"
+    }
+  },
+  {
+    "id": "puxada-supinada",
+    "nome": "Puxada Supinada",
+    "musculoPrincipal": "costas",
+    "musculosSecundarios": [
+      "biceps"
+    ],
+    "equipamento": "maquina",
+    "tipo": "multiarticular",
+    "prescricao": {
+      "series": 3,
+      "repsMin": 10,
+      "repsMax": 12,
+      "descansoSeg": 90
+    },
+    "cadencia": "2-1-2 — cotovelos rente ao corpo",
+    "passos": [
+      "Sente com as coxas presas e segure a barra com as palmas para você.",
+      "Puxe até a parte alta do peito.",
+      "Volte devagar até estender."
+    ],
+    "dicaSeguranca": "Peito aberto; não jogue o tronco para trás.",
+    "alternativas": [
+      "barra-supinada",
+      "puxada-triangulo"
+    ],
+    "apiRefs": {
+      "freeExerciseDb": "Underhand_Cable_Pulldowns",
+      "exerciseDbName": "cable underhand pulldown"
+    }
+  },
+  {
+    "id": "puxada-unilateral",
+    "nome": "Puxada Unilateral na Polia",
+    "musculoPrincipal": "costas",
+    "musculosSecundarios": [
+      "biceps"
+    ],
+    "equipamento": "maquina",
+    "tipo": "isolador",
+    "prescricao": {
+      "series": 3,
+      "repsMin": 10,
+      "repsMax": 12,
+      "descansoSeg": 60
+    },
+    "cadencia": "2-1-2 — alongue bem em cima",
+    "passos": [
+      "Segure a manopla na polia alta com uma mão.",
+      "Puxe levando o cotovelo em direção ao quadril.",
+      "Volte devagar e faça os dois lados."
+    ],
+    "dicaSeguranca": "Bom para corrigir diferença entre os lados. Tronco estável.",
+    "alternativas": [
+      "puxada-frente",
+      "remada-unilateral"
+    ],
+    "apiRefs": {
+      "freeExerciseDb": "One_Arm_Lat_Pulldown",
+      "exerciseDbName": "cable one arm lat pulldown"
+    }
+  },
+  {
+    "id": "remada-cavalinho",
+    "nome": "Remada Cavalinho (T-Bar)",
+    "musculoPrincipal": "costas",
+    "musculosSecundarios": [
+      "biceps",
+      "ombros",
+      "lombar"
+    ],
+    "equipamento": "barra",
+    "tipo": "multiarticular",
+    "prescricao": {
+      "series": 4,
+      "repsMin": 8,
+      "repsMax": 10,
+      "descansoSeg": 120
+    },
+    "cadencia": "2-1-1 — pause no peito",
+    "passos": [
+      "Fique sobre a barra com os joelhos flexionados e o tronco inclinado.",
+      "Segure o pegador com a coluna neutra.",
+      "Puxe até o peito e desça controlando."
+    ],
+    "dicaSeguranca": "Coluna neutra o tempo todo. Se arredondar, reduza a carga.",
+    "alternativas": [
+      "remada-curvada",
+      "remada-apoiada"
+    ],
+    "apiRefs": {
+      "freeExerciseDb": "T-Bar_Row_with_Handle",
+      "exerciseDbName": "lever t bar row"
+    }
+  },
+  {
+    "id": "remada-apoiada",
+    "nome": "Remada Apoiada no Banco Inclinado",
+    "musculoPrincipal": "costas",
+    "musculosSecundarios": [
+      "biceps",
+      "ombros"
+    ],
+    "equipamento": "halteres",
+    "tipo": "multiarticular",
+    "prescricao": {
+      "series": 3,
+      "repsMin": 10,
+      "repsMax": 12,
+      "descansoSeg": 90
+    },
+    "cadencia": "2-1-2 — junte as escápulas",
+    "passos": [
+      "Deite de bruços no banco inclinado a 30–45° com um halter em cada mão.",
+      "Puxe os halteres em direção ao quadril.",
+      "Desça devagar até estender."
+    ],
+    "dicaSeguranca": "Ótima opção para quem sente a lombar na remada curvada.",
+    "alternativas": [
+      "remada-cavalinho",
+      "remada-unilateral"
+    ],
+    "apiRefs": {
+      "freeExerciseDb": "Dumbbell_Incline_Row",
+      "exerciseDbName": "dumbbell incline row"
+    }
+  },
+  {
+    "id": "remada-invertida",
+    "nome": "Remada Invertida",
+    "musculoPrincipal": "costas",
+    "musculosSecundarios": [
+      "biceps",
+      "ombros"
+    ],
+    "equipamento": "peso-corporal",
+    "tipo": "multiarticular",
+    "prescricao": {
+      "series": 3,
+      "repsMin": 8,
+      "repsMax": 12,
+      "descansoSeg": 60
+    },
+    "cadencia": "2-1-2 — peito na barra",
+    "passos": [
+      "Deite sob uma barra baixa (Smith) e segure com pegada pronada.",
+      "Com o corpo reto, puxe o peito até a barra.",
+      "Desça devagar."
+    ],
+    "dicaSeguranca": "Quanto mais vertical o corpo, mais fácil. Glúteos e abdômen contraídos.",
+    "alternativas": [
+      "remada-baixa",
+      "remada-apoiada"
+    ],
+    "apiRefs": {
+      "freeExerciseDb": "Inverted_Row",
+      "exerciseDbName": "inverted row"
+    }
+  },
+  {
+    "id": "remada-alta-maquina",
+    "nome": "Remada Alta na Máquina",
+    "musculoPrincipal": "costas",
+    "musculosSecundarios": [
+      "ombros",
+      "biceps"
+    ],
+    "equipamento": "maquina",
+    "tipo": "multiarticular",
+    "prescricao": {
+      "series": 3,
+      "repsMin": 10,
+      "repsMax": 12,
+      "descansoSeg": 90
+    },
+    "cadencia": "2-1-2 — pause na contração",
+    "passos": [
+      "Ajuste o banco e segure as manoplas acima da linha dos ombros.",
+      "Puxe levando os cotovelos para baixo e para trás.",
+      "Volte devagar."
+    ],
+    "dicaSeguranca": "Peito no apoio e ombros longe das orelhas.",
+    "alternativas": [
+      "puxada-frente",
+      "remada-maquina"
+    ],
+    "apiRefs": {
+      "freeExerciseDb": "Leverage_High_Row",
+      "exerciseDbName": "lever high row"
+    }
+  },
+  {
+    "id": "hiperextensao",
+    "nome": "Hiperextensão Lombar (Banco Romano)",
+    "musculoPrincipal": "lombar",
+    "musculosSecundarios": [
+      "gluteos",
+      "posteriores"
+    ],
+    "equipamento": "peso-corporal",
+    "tipo": "isolador",
+    "prescricao": {
+      "series": 3,
+      "repsMin": 12,
+      "repsMax": 15,
+      "descansoSeg": 60
+    },
+    "cadencia": "2-1-2 — pare na linha do corpo",
+    "passos": [
+      "Apoie o quadril no banco e prenda os tornozelos.",
+      "Desça o tronco com a coluna neutra.",
+      "Suba até o corpo ficar alinhado, sem passar disso."
+    ],
+    "dicaSeguranca": "Não hiperestenda a coluna no topo. Segure uma anilha no peito para progredir.",
+    "alternativas": [
+      "superman",
+      "good-morning"
+    ],
+    "apiRefs": {
+      "freeExerciseDb": "Hyperextensions_Back_Extensions",
+      "exerciseDbName": "hyperextension"
+    }
+  },
+  {
+    "id": "superman",
+    "nome": "Superman (Extensão no Solo)",
+    "musculoPrincipal": "lombar",
+    "musculosSecundarios": [
+      "gluteos"
+    ],
+    "equipamento": "peso-corporal",
+    "tipo": "isolador",
+    "prescricao": {
+      "series": 3,
+      "repsMin": 12,
+      "repsMax": 15,
+      "descansoSeg": 45
+    },
+    "cadencia": "1-2-1 — segure 2 s em cima",
+    "passos": [
+      "Deite de bruços com os braços estendidos à frente.",
+      "Eleve braços e pernas ao mesmo tempo.",
+      "Segure e desça devagar."
+    ],
+    "dicaSeguranca": "Movimento pequeno; olhe para o chão para manter o pescoço neutro.",
+    "alternativas": [
+      "hiperextensao"
+    ],
+    "apiRefs": {
+      "freeExerciseDb": "Superman",
+      "exerciseDbName": "superman"
+    }
+  },
+  {
+    "id": "levantamento-terra",
+    "nome": "Levantamento Terra",
+    "musculoPrincipal": "lombar",
+    "musculosSecundarios": [
+      "posteriores",
+      "gluteos",
+      "quadriceps",
+      "trapezio"
+    ],
+    "equipamento": "barra",
+    "tipo": "multiarticular",
+    "prescricao": {
+      "series": 3,
+      "repsMin": 5,
+      "repsMax": 8,
+      "descansoSeg": 150
+    },
+    "cadencia": "Subida firme, descida controlada",
+    "passos": [
+      "Pés na largura do quadril com a barra sobre o meio do pé.",
+      "Segure a barra, desça o quadril e deixe a coluna neutra.",
+      "Empurre o chão e estenda quadril e joelhos juntos.",
+      "Desça a barra rente às pernas."
+    ],
+    "dicaSeguranca": "Coluna neutra do início ao fim. Aprenda com carga leve e, se possível, com orientação.",
+    "alternativas": [
+      "levantamento-terra-sumo",
+      "rack-pull"
+    ],
+    "apiRefs": {
+      "freeExerciseDb": "Barbell_Deadlift",
+      "exerciseDbName": "barbell deadlift"
+    }
+  },
+  {
+    "id": "levantamento-terra-sumo",
+    "nome": "Levantamento Terra Sumô",
+    "musculoPrincipal": "posteriores",
+    "musculosSecundarios": [
+      "gluteos",
+      "quadriceps",
+      "adutores"
+    ],
+    "equipamento": "barra",
+    "tipo": "multiarticular",
+    "prescricao": {
+      "series": 3,
+      "repsMin": 5,
+      "repsMax": 8,
+      "descansoSeg": 150
+    },
+    "cadencia": "Subida firme, descida controlada",
+    "passos": [
+      "Pés bem afastados com as pontas para fora e mãos por dentro das pernas.",
+      "Peito aberto e coluna neutra.",
+      "Empurre o chão afastando os joelhos e estenda o quadril."
+    ],
+    "dicaSeguranca": "Joelhos acompanham a direção dos pés. Coluna neutra.",
+    "alternativas": [
+      "levantamento-terra",
+      "terra-romeno"
+    ],
+    "apiRefs": {
+      "freeExerciseDb": "Sumo_Deadlift",
+      "exerciseDbName": "barbell sumo deadlift"
+    }
+  },
+  {
+    "id": "rack-pull",
+    "nome": "Terra Parcial (Rack Pull)",
+    "musculoPrincipal": "lombar",
+    "musculosSecundarios": [
+      "trapezio",
+      "gluteos",
+      "posteriores"
+    ],
+    "equipamento": "barra",
+    "tipo": "multiarticular",
+    "prescricao": {
+      "series": 3,
+      "repsMin": 6,
+      "repsMax": 8,
+      "descansoSeg": 120
+    },
+    "cadencia": "Subida firme, descida controlada",
+    "passos": [
+      "Apoie a barra no rack na altura dos joelhos.",
+      "Segure com a coluna neutra.",
+      "Estenda o quadril até ficar em pé e desça controlando."
+    ],
+    "dicaSeguranca": "Menos amplitude que o terra, ótimo para costas e trapézio. Não hiperestenda no topo.",
+    "alternativas": [
+      "levantamento-terra",
+      "encolhimento-barra"
+    ],
+    "apiRefs": {
+      "freeExerciseDb": "Rack_Pulls",
+      "exerciseDbName": "barbell rack pull"
+    }
+  },
+  {
+    "id": "good-morning",
+    "nome": "Good Morning",
+    "musculoPrincipal": "posteriores",
+    "musculosSecundarios": [
+      "lombar",
+      "gluteos"
+    ],
+    "equipamento": "barra",
+    "tipo": "multiarticular",
+    "prescricao": {
+      "series": 3,
+      "repsMin": 10,
+      "repsMax": 12,
+      "descansoSeg": 90
+    },
+    "cadencia": "3-0-1 — desça devagar",
+    "passos": [
+      "Barra no trapézio, joelhos levemente flexionados.",
+      "Incline o tronco à frente levando o quadril para trás.",
+      "Suba contraindo glúteos e posteriores."
+    ],
+    "dicaSeguranca": "Use carga leve. Coluna neutra e barra estável.",
+    "alternativas": [
+      "terra-romeno",
+      "hiperextensao"
+    ],
+    "apiRefs": {
+      "freeExerciseDb": "Good_Morning",
+      "exerciseDbName": "barbell good morning"
+    }
+  },
+  {
+    "id": "encolhimento-polia",
+    "nome": "Encolhimento na Polia",
+    "musculoPrincipal": "trapezio",
+    "musculosSecundarios": [
+      "antebraco"
+    ],
+    "equipamento": "maquina",
+    "tipo": "isolador",
+    "prescricao": {
+      "series": 3,
+      "repsMin": 12,
+      "repsMax": 15,
+      "descansoSeg": 45
+    },
+    "cadencia": "1-2-2 — segure no topo",
+    "passos": [
+      "Segure a barra na polia baixa à frente do corpo.",
+      "Eleve os ombros em direção às orelhas.",
+      "Segure e desça devagar."
+    ],
+    "dicaSeguranca": "Sem girar os ombros. Tensão constante.",
+    "alternativas": [
+      "encolhimento-barra",
+      "encolhimento-maquina"
+    ],
+    "apiRefs": {
+      "freeExerciseDb": "Cable_Shrugs",
+      "exerciseDbName": "cable shrug"
+    }
+  },
+  {
+    "id": "encolhimento-maquina",
+    "nome": "Encolhimento na Máquina",
+    "musculoPrincipal": "trapezio",
+    "musculosSecundarios": [
+      "antebraco"
+    ],
+    "equipamento": "maquina",
+    "tipo": "isolador",
+    "prescricao": {
+      "series": 3,
+      "repsMin": 12,
+      "repsMax": 15,
+      "descansoSeg": 45
+    },
+    "cadencia": "1-2-2 — segure no topo",
+    "passos": [
+      "Ajuste a máquina e segure as manoplas.",
+      "Eleve os ombros o máximo possível.",
+      "Segure e desça devagar."
+    ],
+    "dicaSeguranca": "Pescoço neutro e olhar para frente.",
+    "alternativas": [
+      "encolhimento-halteres",
+      "encolhimento-polia"
+    ],
+    "apiRefs": {
+      "freeExerciseDb": "Leverage_Shrug",
+      "exerciseDbName": "lever shrug"
+    }
+  },
+  {
+    "id": "caminhada-fazendeiro",
+    "nome": "Caminhada do Fazendeiro",
+    "musculoPrincipal": "antebraco",
+    "musculosSecundarios": [
+      "trapezio",
+      "abdomen"
+    ],
+    "equipamento": "halteres",
+    "tipo": "multiarticular",
+    "prescricao": {
+      "series": 3,
+      "repsMin": 30,
+      "repsMax": 40,
+      "descansoSeg": 90,
+      "unidade": "s"
+    },
+    "cadencia": "Passos curtos e firmes",
+    "passos": [
+      "Segure um halter pesado em cada mão.",
+      "Fique ereto com os ombros para trás.",
+      "Caminhe pelo tempo prescrito."
+    ],
+    "dicaSeguranca": "Abdômen firme e ombros longe das orelhas. Solte os pesos com cuidado.",
+    "alternativas": [
+      "encolhimento-halteres",
+      "rosca-punho"
+    ],
+    "apiRefs": {
+      "freeExerciseDb": "Farmers_Walk",
+      "exerciseDbName": "farmers walk"
+    }
+  },
+  {
+    "id": "rosca-concentrada",
+    "nome": "Rosca Concentrada",
+    "musculoPrincipal": "biceps",
+    "musculosSecundarios": [],
+    "equipamento": "halteres",
+    "tipo": "isolador",
+    "prescricao": {
+      "series": 3,
+      "repsMin": 10,
+      "repsMax": 12,
+      "descansoSeg": 45
+    },
+    "cadencia": "2-1-3 — aperte em cima",
+    "passos": [
+      "Sente e apoie o cotovelo na parte interna da coxa.",
+      "Suba o halter girando a palma para cima.",
+      "Desça devagar até estender."
+    ],
+    "dicaSeguranca": "Cotovelo parado na coxa. Faça os dois lados.",
+    "alternativas": [
+      "rosca-scott",
+      "rosca-alternada"
+    ],
+    "apiRefs": {
+      "freeExerciseDb": "Concentration_Curls",
+      "exerciseDbName": "dumbbell concentration curl"
+    }
+  },
+  {
+    "id": "rosca-inclinada",
+    "nome": "Rosca Inclinada com Halteres",
+    "musculoPrincipal": "biceps",
+    "musculosSecundarios": [
+      "antebraco"
+    ],
+    "equipamento": "halteres",
+    "tipo": "isolador",
+    "prescricao": {
+      "series": 3,
+      "repsMin": 10,
+      "repsMax": 12,
+      "descansoSeg": 60
+    },
+    "cadencia": "2-0-3 — alongue embaixo",
+    "passos": [
+      "Sente num banco inclinado a 45° com os braços pendurados.",
+      "Suba os halteres sem levar os cotovelos para frente.",
+      "Desça devagar até estender."
+    ],
+    "dicaSeguranca": "Trabalha o bíceps alongado. Carga menor que na rosca em pé.",
+    "alternativas": [
+      "rosca-alternada",
+      "rosca-direta"
+    ],
+    "apiRefs": {
+      "freeExerciseDb": "Incline_Dumbbell_Curl",
+      "exerciseDbName": "dumbbell incline curl"
+    }
+  },
+  {
+    "id": "rosca-polia",
+    "nome": "Rosca na Polia",
+    "musculoPrincipal": "biceps",
+    "musculosSecundarios": [
+      "antebraco"
+    ],
+    "equipamento": "maquina",
+    "tipo": "isolador",
+    "prescricao": {
+      "series": 3,
+      "repsMin": 12,
+      "repsMax": 15,
+      "descansoSeg": 45
+    },
+    "cadencia": "2-1-2 — tensão constante",
+    "passos": [
+      "Segure a barra na polia baixa com as palmas para frente.",
+      "Suba com os cotovelos junto ao corpo.",
+      "Desça devagar."
+    ],
+    "dicaSeguranca": "Ótima para finalizar o treino de bíceps. Sem balanço.",
+    "alternativas": [
+      "rosca-direta",
+      "rosca-scott-polia"
+    ],
+    "apiRefs": {
+      "freeExerciseDb": "Standing_Biceps_Cable_Curl",
+      "exerciseDbName": "cable curl"
+    }
+  },
+  {
+    "id": "rosca-scott-polia",
+    "nome": "Rosca Scott na Polia",
+    "musculoPrincipal": "biceps",
+    "musculosSecundarios": [],
+    "equipamento": "maquina",
+    "tipo": "isolador",
+    "prescricao": {
+      "series": 3,
+      "repsMin": 10,
+      "repsMax": 12,
+      "descansoSeg": 45
+    },
+    "cadencia": "2-0-3 — controle a descida",
+    "passos": [
+      "Posicione o banco Scott à frente da polia baixa.",
+      "Apoie os braços e segure a barra.",
+      "Suba e desça devagar sem travar embaixo."
+    ],
+    "dicaSeguranca": "A descida é a parte mais importante: não deixe a barra cair.",
+    "alternativas": [
+      "rosca-scott",
+      "rosca-polia"
+    ],
+    "apiRefs": {
+      "freeExerciseDb": "Cable_Preacher_Curl",
+      "exerciseDbName": "cable preacher curl"
+    }
+  },
+  {
+    "id": "rosca-barra-w",
+    "nome": "Rosca com Barra W",
+    "musculoPrincipal": "biceps",
+    "musculosSecundarios": [
+      "antebraco"
+    ],
+    "equipamento": "barra",
+    "tipo": "isolador",
+    "prescricao": {
+      "series": 3,
+      "repsMin": 8,
+      "repsMax": 12,
+      "descansoSeg": 60
+    },
+    "cadencia": "2-0-3 — desça em 3 s",
+    "passos": [
+      "Em pé, segure a barra W nas pegadas internas ou externas.",
+      "Suba com os cotovelos junto ao corpo.",
+      "Desça devagar até estender."
+    ],
+    "dicaSeguranca": "A barra W é mais confortável para os punhos que a reta.",
+    "alternativas": [
+      "rosca-direta",
+      "rosca-alternada"
+    ],
+    "apiRefs": {
+      "freeExerciseDb": "EZ-Bar_Curl",
+      "exerciseDbName": "ez barbell curl"
+    }
+  },
+  {
+    "id": "rosca-martelo-corda",
+    "nome": "Rosca Martelo na Corda",
+    "musculoPrincipal": "biceps",
+    "musculosSecundarios": [
+      "antebraco"
+    ],
+    "equipamento": "maquina",
+    "tipo": "isolador",
+    "prescricao": {
+      "series": 3,
+      "repsMin": 12,
+      "repsMax": 15,
+      "descansoSeg": 45
+    },
+    "cadencia": "2-1-2 — tensão constante",
+    "passos": [
+      "Prenda a corda na polia baixa e segure com as palmas frente a frente.",
+      "Suba com os cotovelos junto ao corpo.",
+      "Desça devagar."
+    ],
+    "dicaSeguranca": "Bom para braquial e antebraço.",
+    "alternativas": [
+      "rosca-martelo",
+      "rosca-polia"
+    ],
+    "apiRefs": {
+      "freeExerciseDb": "Cable_Hammer_Curls_-_Rope_Attachment",
+      "exerciseDbName": "cable hammer curl (with rope)"
+    }
+  },
+  {
+    "id": "rosca-inversa",
+    "nome": "Rosca Inversa com Barra",
+    "musculoPrincipal": "antebraco",
+    "musculosSecundarios": [
+      "biceps"
+    ],
+    "equipamento": "barra",
+    "tipo": "isolador",
+    "prescricao": {
+      "series": 3,
+      "repsMin": 10,
+      "repsMax": 15,
+      "descansoSeg": 45
+    },
+    "cadencia": "2-0-2 — punhos firmes",
+    "passos": [
+      "Em pé, segure a barra com as palmas para baixo.",
+      "Suba com os cotovelos junto ao corpo.",
+      "Desça devagar."
+    ],
+    "dicaSeguranca": "Use carga leve: o foco é antebraço e braquiorradial.",
+    "alternativas": [
+      "rosca-martelo",
+      "rosca-punho-inversa"
+    ],
+    "apiRefs": {
+      "freeExerciseDb": "Reverse_Barbell_Curl",
+      "exerciseDbName": "barbell reverse curl"
+    }
+  },
+  {
+    "id": "rosca-punho-inversa",
+    "nome": "Rosca de Punho Inversa",
+    "musculoPrincipal": "antebraco",
+    "musculosSecundarios": [],
+    "equipamento": "barra",
+    "tipo": "isolador",
+    "prescricao": {
+      "series": 3,
+      "repsMin": 12,
+      "repsMax": 20,
+      "descansoSeg": 45
+    },
+    "cadencia": "2-1-2 — amplitude completa",
+    "passos": [
+      "Apoie os antebraços no banco com as palmas para baixo.",
+      "Estenda os punhos levantando a barra.",
+      "Desça devagar."
+    ],
+    "dicaSeguranca": "Carga bem leve. Pare se sentir dor no punho.",
+    "alternativas": [
+      "rosca-punho",
+      "rosca-inversa"
+    ],
+    "apiRefs": {
+      "freeExerciseDb": "Palms-Down_Wrist_Curl_Over_A_Bench",
+      "exerciseDbName": "barbell reverse wrist curl"
+    }
+  },
+  {
+    "id": "rolo-de-punho",
+    "nome": "Rolo de Punho",
+    "musculoPrincipal": "antebraco",
+    "musculosSecundarios": [
+      "ombros"
+    ],
+    "equipamento": "outro",
+    "tipo": "isolador",
+    "prescricao": {
+      "series": 3,
+      "repsMin": 2,
+      "repsMax": 3,
+      "descansoSeg": 60
+    },
+    "cadencia": "Gire devagar nos dois sentidos",
+    "passos": [
+      "Segure o rolo com os braços estendidos à frente.",
+      "Gire os punhos enrolando a corda até a anilha subir.",
+      "Desenrole devagar até descer. Isso é 1 repetição."
+    ],
+    "dicaSeguranca": "Use pouca carga; a queimação vem rápido.",
+    "alternativas": [
+      "rosca-punho",
+      "caminhada-fazendeiro"
+    ],
+    "apiRefs": {
+      "freeExerciseDb": "Wrist_Roller",
+      "exerciseDbName": "wrist roller"
+    }
+  },
+  {
+    "id": "triceps-coice",
+    "nome": "Tríceps Coice com Halter",
+    "musculoPrincipal": "triceps",
+    "musculosSecundarios": [],
+    "equipamento": "halteres",
+    "tipo": "isolador",
+    "prescricao": {
+      "series": 3,
+      "repsMin": 12,
+      "repsMax": 15,
+      "descansoSeg": 45
+    },
+    "cadencia": "2-1-2 — estenda e segure",
+    "passos": [
+      "Apoie uma mão e um joelho no banco com o tronco paralelo ao chão.",
+      "Cotovelo junto ao corpo a 90°.",
+      "Estenda o braço para trás e volte devagar."
+    ],
+    "dicaSeguranca": "Só o antebraço se mexe. Carga leve.",
+    "alternativas": [
+      "triceps-corda",
+      "triceps-unilateral-polia"
+    ],
+    "apiRefs": {
+      "freeExerciseDb": "Tricep_Dumbbell_Kickback",
+      "exerciseDbName": "dumbbell kickback"
+    }
+  },
+  {
+    "id": "triceps-frances-halter",
+    "nome": "Tríceps Francês com Halter",
+    "musculoPrincipal": "triceps",
+    "musculosSecundarios": [],
+    "equipamento": "halteres",
+    "tipo": "isolador",
+    "prescricao": {
+      "series": 3,
+      "repsMin": 10,
+      "repsMax": 12,
+      "descansoSeg": 60
+    },
+    "cadencia": "2-1-2 — alongue atrás da cabeça",
+    "passos": [
+      "Sentado, segure um halter com as duas mãos acima da cabeça.",
+      "Desça o halter atrás da cabeça flexionando os cotovelos.",
+      "Estenda de volta."
+    ],
+    "dicaSeguranca": "Cotovelos apontando para cima e abdômen firme.",
+    "alternativas": [
+      "triceps-frances",
+      "triceps-testa"
+    ],
+    "apiRefs": {
+      "freeExerciseDb": "Standing_Dumbbell_Triceps_Extension",
+      "exerciseDbName": "dumbbell seated triceps extension"
+    }
+  },
+  {
+    "id": "triceps-maquina",
+    "nome": "Tríceps na Máquina",
+    "musculoPrincipal": "triceps",
+    "musculosSecundarios": [],
+    "equipamento": "maquina",
+    "tipo": "isolador",
+    "prescricao": {
+      "series": 3,
+      "repsMin": 10,
+      "repsMax": 12,
+      "descansoSeg": 60
+    },
+    "cadencia": "2-0-2 — movimento contínuo",
+    "passos": [
+      "Ajuste o banco e apoie os braços.",
+      "Estenda os cotovelos empurrando as manoplas.",
+      "Volte devagar."
+    ],
+    "dicaSeguranca": "Ótima opção para iniciantes. Não trave com tranco.",
+    "alternativas": [
+      "triceps-pulley",
+      "mergulho-banco"
+    ],
+    "apiRefs": {
+      "freeExerciseDb": "Machine_Triceps_Extension",
+      "exerciseDbName": "lever triceps extension"
+    }
+  },
+  {
+    "id": "triceps-pulley-inverso",
+    "nome": "Tríceps Pulley Pegada Inversa",
+    "musculoPrincipal": "triceps",
+    "musculosSecundarios": [],
+    "equipamento": "maquina",
+    "tipo": "isolador",
+    "prescricao": {
+      "series": 3,
+      "repsMin": 12,
+      "repsMax": 15,
+      "descansoSeg": 45
+    },
+    "cadencia": "2-1-2 — controle a subida",
+    "passos": [
+      "Segure a barra na polia alta com as palmas para cima.",
+      "Cotovelos junto ao corpo.",
+      "Estenda os braços e volte devagar."
+    ],
+    "dicaSeguranca": "Carga menor que na pegada normal. Punhos firmes.",
+    "alternativas": [
+      "triceps-pulley",
+      "triceps-corda"
+    ],
+    "apiRefs": {
+      "freeExerciseDb": "Reverse_Grip_Triceps_Pushdown",
+      "exerciseDbName": "cable reverse grip pushdown"
+    }
+  },
+  {
+    "id": "triceps-unilateral-polia",
+    "nome": "Tríceps Unilateral na Polia",
+    "musculoPrincipal": "triceps",
+    "musculosSecundarios": [],
+    "equipamento": "maquina",
+    "tipo": "isolador",
+    "prescricao": {
+      "series": 3,
+      "repsMin": 12,
+      "repsMax": 15,
+      "descansoSeg": 45
+    },
+    "cadencia": "2-1-2 — estenda e segure",
+    "passos": [
+      "Segure a manopla na polia alta com uma mão.",
+      "Estenda o braço para baixo com o cotovelo fixo.",
+      "Volte devagar e faça os dois lados."
+    ],
+    "dicaSeguranca": "Bom para corrigir diferença entre os braços.",
+    "alternativas": [
+      "triceps-corda",
+      "triceps-coice"
+    ],
+    "apiRefs": {
+      "freeExerciseDb": "Cable_One_Arm_Tricep_Extension",
+      "exerciseDbName": "cable one arm triceps pushdown"
+    }
+  },
+  {
+    "id": "flexao-diamante",
+    "nome": "Flexão Fechada",
+    "musculoPrincipal": "triceps",
+    "musculosSecundarios": [
+      "peito",
+      "ombros"
+    ],
+    "equipamento": "peso-corporal",
+    "tipo": "multiarticular",
+    "prescricao": {
+      "series": 3,
+      "repsMin": 8,
+      "repsMax": 15,
+      "descansoSeg": 60
+    },
+    "cadencia": "2-0-1 — cotovelos junto ao corpo",
+    "passos": [
+      "Mãos próximas sob o peito e corpo reto.",
+      "Desça com os cotovelos rente ao tronco.",
+      "Empurre de volta."
+    ],
+    "dicaSeguranca": "Quadril alinhado. Apoie os joelhos se precisar.",
+    "alternativas": [
+      "mergulho-banco",
+      "supino-fechado"
+    ],
+    "apiRefs": {
+      "freeExerciseDb": "Close-Grip_Push-Up_off_of_a_Dumbbell",
+      "exerciseDbName": "close-grip push-up"
+    }
+  },
+  {
+    "id": "agachamento-frontal",
+    "nome": "Agachamento Frontal",
+    "musculoPrincipal": "quadriceps",
+    "musculosSecundarios": [
+      "gluteos",
+      "abdomen"
+    ],
+    "equipamento": "barra",
+    "tipo": "multiarticular",
+    "prescricao": {
+      "series": 4,
+      "repsMin": 6,
+      "repsMax": 8,
+      "descansoSeg": 150
+    },
+    "cadencia": "3-1-1 — tronco bem ereto",
+    "passos": [
+      "Apoie a barra na frente dos ombros com os cotovelos altos.",
+      "Desça mantendo o tronco o mais vertical possível.",
+      "Suba empurrando o chão."
+    ],
+    "dicaSeguranca": "Cotovelos altos o tempo todo para a barra não rolar. Use as travas do rack.",
+    "alternativas": [
+      "agachamento-livre",
+      "agachamento-goblet"
+    ],
+    "apiRefs": {
+      "freeExerciseDb": "Front_Barbell_Squat",
+      "exerciseDbName": "barbell front squat"
+    }
+  },
+  {
+    "id": "agachamento-sumo",
+    "nome": "Agachamento Sumô com Halter",
+    "musculoPrincipal": "quadriceps",
+    "musculosSecundarios": [
+      "gluteos",
+      "adutores"
+    ],
+    "equipamento": "halteres",
+    "tipo": "multiarticular",
+    "prescricao": {
+      "series": 3,
+      "repsMin": 10,
+      "repsMax": 15,
+      "descansoSeg": 90
+    },
+    "cadencia": "3-1-1 — pause embaixo",
+    "passos": [
+      "Pés bem afastados com as pontas para fora.",
+      "Segure um halter entre as pernas.",
+      "Desça afastando os joelhos e suba contraindo glúteos e adutores."
+    ],
+    "dicaSeguranca": "Joelhos na direção dos pés e tronco ereto.",
+    "alternativas": [
+      "agachamento-goblet",
+      "cadeira-adutora"
+    ],
+    "apiRefs": {
+      "freeExerciseDb": "Plie_Dumbbell_Squat",
+      "exerciseDbName": "dumbbell plie squat"
+    }
+  },
+  {
+    "id": "agachamento-livre-peso",
+    "nome": "Agachamento Livre (Peso Corporal)",
+    "musculoPrincipal": "quadriceps",
+    "musculosSecundarios": [
+      "gluteos"
+    ],
+    "equipamento": "peso-corporal",
+    "tipo": "multiarticular",
+    "prescricao": {
+      "series": 3,
+      "repsMin": 15,
+      "repsMax": 20,
+      "descansoSeg": 60
+    },
+    "cadencia": "2-0-1 — controle a descida",
+    "passos": [
+      "Pés na largura dos ombros e braços à frente.",
+      "Desça como se fosse sentar numa cadeira.",
+      "Suba empurrando o chão."
+    ],
+    "dicaSeguranca": "Ótimo para aquecimento e para aprender o movimento.",
+    "alternativas": [
+      "agachamento-goblet",
+      "leg-press"
+    ],
+    "apiRefs": {
+      "freeExerciseDb": "Bodyweight_Squat",
+      "exerciseDbName": "bodyweight squat"
+    }
+  },
+  {
+    "id": "leg-press-fechado",
+    "nome": "Leg Press Pés Juntos",
+    "musculoPrincipal": "quadriceps",
+    "musculosSecundarios": [
+      "gluteos"
+    ],
+    "equipamento": "maquina",
+    "tipo": "multiarticular",
+    "prescricao": {
+      "series": 3,
+      "repsMin": 10,
+      "repsMax": 12,
+      "descansoSeg": 90
+    },
+    "cadencia": "3-0-1 — desça em 3 s",
+    "passos": [
+      "Sente no leg press com os pés próximos e no meio da plataforma.",
+      "Desça até cerca de 90°.",
+      "Empurre sem travar os joelhos."
+    ],
+    "dicaSeguranca": "Pés mais juntos e mais baixos enfatizam o quadríceps.",
+    "alternativas": [
+      "leg-press",
+      "agachamento-hack"
+    ],
+    "apiRefs": {
+      "freeExerciseDb": "Narrow_Stance_Leg_Press",
+      "exerciseDbName": "sled narrow stance leg press"
+    }
+  },
+  {
+    "id": "subida-banco",
+    "nome": "Subida no Banco (Step-up)",
+    "musculoPrincipal": "quadriceps",
+    "musculosSecundarios": [
+      "gluteos"
+    ],
+    "equipamento": "halteres",
+    "tipo": "multiarticular",
+    "prescricao": {
+      "series": 3,
+      "repsMin": 10,
+      "repsMax": 12,
+      "descansoSeg": 60
+    },
+    "cadencia": "2-0-1 — suba com a perna da frente",
+    "passos": [
+      "Fique de frente para um banco com um halter em cada mão.",
+      "Suba apoiando o pé inteiro e empurrando com a perna da frente.",
+      "Desça devagar e alterne."
+    ],
+    "dicaSeguranca": "Não dê impulso com a perna de trás. Banco firme e na altura do joelho.",
+    "alternativas": [
+      "passada-halteres",
+      "afundo-bulgaro"
+    ],
+    "apiRefs": {
+      "freeExerciseDb": "Dumbbell_Step_Ups",
+      "exerciseDbName": "dumbbell step-up"
+    }
+  },
+  {
+    "id": "passada-barra",
+    "nome": "Passada Andando com Barra",
+    "musculoPrincipal": "quadriceps",
+    "musculosSecundarios": [
+      "gluteos",
+      "posteriores"
+    ],
+    "equipamento": "barra",
+    "tipo": "multiarticular",
+    "prescricao": {
+      "series": 3,
+      "repsMin": 10,
+      "repsMax": 12,
+      "descansoSeg": 90
+    },
+    "cadencia": "2-0-1 — passos firmes",
+    "passos": [
+      "Barra no trapézio, em pé.",
+      "Dê passos à frente descendo até 90° nos joelhos.",
+      "Avance alternando as pernas."
+    ],
+    "dicaSeguranca": "Precisa de espaço livre. Comece com carga leve para ganhar equilíbrio.",
+    "alternativas": [
+      "passada-halteres",
+      "avanco-reverso"
+    ],
+    "apiRefs": {
+      "freeExerciseDb": "Barbell_Walking_Lunge",
+      "exerciseDbName": "barbell walking lunge"
+    }
+  },
+  {
+    "id": "flexao-nordica",
+    "nome": "Flexão Nórdica Assistida",
+    "musculoPrincipal": "posteriores",
+    "musculosSecundarios": [
+      "gluteos"
+    ],
+    "equipamento": "peso-corporal",
+    "tipo": "isolador",
+    "prescricao": {
+      "series": 3,
+      "repsMin": 4,
+      "repsMax": 8,
+      "descansoSeg": 90
+    },
+    "cadencia": "Desça o mais devagar possível",
+    "passos": [
+      "Ajoelhe com os tornozelos presos.",
+      "Desça o tronco à frente devagar resistindo com os posteriores.",
+      "Apoie as mãos no chão e empurre para voltar."
+    ],
+    "dicaSeguranca": "Muito intenso: comece com poucas repetições e amplitude parcial.",
+    "alternativas": [
+      "mesa-flexora",
+      "cadeira-flexora"
+    ],
+    "apiRefs": {
+      "freeExerciseDb": "Natural_Glute_Ham_Raise",
+      "exerciseDbName": "nordic hamstring curl"
+    }
+  },
+  {
+    "id": "stiff-unilateral",
+    "nome": "Stiff Unilateral com Halter",
+    "musculoPrincipal": "posteriores",
+    "musculosSecundarios": [
+      "gluteos",
+      "lombar"
+    ],
+    "equipamento": "halteres",
+    "tipo": "multiarticular",
+    "prescricao": {
+      "series": 3,
+      "repsMin": 10,
+      "repsMax": 12,
+      "descansoSeg": 60
+    },
+    "cadencia": "3-0-1 — equilíbrio primeiro",
+    "passos": [
+      "Segure um halter e apoie o peso numa perna.",
+      "Incline o tronco levando a outra perna para trás.",
+      "Volte contraindo o glúteo da perna de apoio."
+    ],
+    "dicaSeguranca": "Quadril nivelado; apoie uma mão num suporte se perder o equilíbrio.",
+    "alternativas": [
+      "stiff-halteres",
+      "terra-romeno"
+    ],
+    "apiRefs": {
+      "freeExerciseDb": "Stiff-Legged_Dumbbell_Deadlift",
+      "exerciseDbName": "dumbbell single leg deadlift"
+    }
+  },
+  {
+    "id": "gluteo-polia",
+    "nome": "Glúteo na Polia (Coice)",
+    "musculoPrincipal": "gluteos",
+    "musculosSecundarios": [
+      "posteriores"
+    ],
+    "equipamento": "maquina",
+    "tipo": "isolador",
+    "prescricao": {
+      "series": 3,
+      "repsMin": 12,
+      "repsMax": 15,
+      "descansoSeg": 45
+    },
+    "cadencia": "2-1-2 — segure atrás",
+    "passos": [
+      "Prenda a tornozeleira na polia baixa.",
+      "Segure na máquina e leve a perna para trás estendida.",
+      "Volte devagar e faça os dois lados."
+    ],
+    "dicaSeguranca": "Não arqueie a lombar ao levar a perna para trás.",
+    "alternativas": [
+      "gluteo-quatro-apoios",
+      "elevacao-pelvica"
+    ],
+    "apiRefs": {
+      "freeExerciseDb": "One-Legged_Cable_Kickback",
+      "exerciseDbName": "cable kickback"
+    }
+  },
+  {
+    "id": "ponte-unilateral",
+    "nome": "Ponte de Glúteo Unilateral",
+    "musculoPrincipal": "gluteos",
+    "musculosSecundarios": [
+      "posteriores"
+    ],
+    "equipamento": "peso-corporal",
+    "tipo": "isolador",
+    "prescricao": {
+      "series": 3,
+      "repsMin": 12,
+      "repsMax": 15,
+      "descansoSeg": 45
+    },
+    "cadencia": "1-2-2 — segure no topo",
+    "passos": [
+      "Deite com um joelho flexionado e a outra perna estendida.",
+      "Eleve o quadril empurrando com o calcanhar.",
+      "Segure e desça. Faça os dois lados."
+    ],
+    "dicaSeguranca": "Quadril nivelado durante todo o movimento.",
+    "alternativas": [
+      "ponte-gluteo",
+      "elevacao-pelvica"
+    ],
+    "apiRefs": {
+      "freeExerciseDb": "Single_Leg_Glute_Bridge",
+      "exerciseDbName": "single leg glute bridge"
+    }
+  },
+  {
+    "id": "pull-through",
+    "nome": "Pull Through na Polia",
+    "musculoPrincipal": "gluteos",
+    "musculosSecundarios": [
+      "posteriores",
+      "lombar"
+    ],
+    "equipamento": "maquina",
+    "tipo": "multiarticular",
+    "prescricao": {
+      "series": 3,
+      "repsMin": 12,
+      "repsMax": 15,
+      "descansoSeg": 60
+    },
+    "cadencia": "2-1-2 — contraia o glúteo",
+    "passos": [
+      "De costas para a polia baixa, segure a corda entre as pernas.",
+      "Incline o tronco levando o quadril para trás.",
+      "Estenda o quadril contraindo os glúteos."
+    ],
+    "dicaSeguranca": "O movimento vem do quadril, não dos braços. Coluna neutra.",
+    "alternativas": [
+      "elevacao-pelvica",
+      "terra-romeno"
+    ],
+    "apiRefs": {
+      "freeExerciseDb": "Pull_Through",
+      "exerciseDbName": "cable pull through"
+    }
+  },
+  {
+    "id": "cadeira-adutora",
+    "nome": "Cadeira Adutora",
+    "musculoPrincipal": "adutores",
+    "musculosSecundarios": [
+      "gluteos"
+    ],
+    "equipamento": "maquina",
+    "tipo": "isolador",
+    "prescricao": {
+      "series": 3,
+      "repsMin": 12,
+      "repsMax": 20,
+      "descansoSeg": 45
+    },
+    "cadencia": "2-1-2 — segure fechado",
+    "passos": [
+      "Sente com as pernas por fora das almofadas.",
+      "Feche as pernas contraindo a parte interna da coxa.",
+      "Abra devagar sem deixar as placas baterem."
+    ],
+    "dicaSeguranca": "Ajuste a amplitude inicial para não forçar a virilha.",
+    "alternativas": [
+      "adutor-polia",
+      "agachamento-sumo"
+    ],
+    "apiRefs": {
+      "freeExerciseDb": "Thigh_Adductor",
+      "exerciseDbName": "lever seated hip adduction"
+    }
+  },
+  {
+    "id": "adutor-polia",
+    "nome": "Adução na Polia",
+    "musculoPrincipal": "adutores",
+    "musculosSecundarios": [],
+    "equipamento": "maquina",
+    "tipo": "isolador",
+    "prescricao": {
+      "series": 3,
+      "repsMin": 12,
+      "repsMax": 15,
+      "descansoSeg": 45
+    },
+    "cadencia": "2-1-2 — cruze a frente",
+    "passos": [
+      "Prenda a tornozeleira na polia baixa e fique de lado.",
+      "Leve a perna em direção à outra, cruzando à frente.",
+      "Volte devagar e faça os dois lados."
+    ],
+    "dicaSeguranca": "Tronco ereto, segurando na máquina.",
+    "alternativas": [
+      "cadeira-adutora"
+    ],
+    "apiRefs": {
+      "freeExerciseDb": "Cable_Hip_Adduction",
+      "exerciseDbName": "cable hip adduction"
+    }
+  },
+  {
+    "id": "panturrilha-halter",
+    "nome": "Panturrilha em Pé com Halter",
+    "musculoPrincipal": "panturrilhas",
+    "musculosSecundarios": [],
+    "equipamento": "halteres",
+    "tipo": "isolador",
+    "prescricao": {
+      "series": 3,
+      "repsMin": 12,
+      "repsMax": 15,
+      "descansoSeg": 45
+    },
+    "cadencia": "2-2-1 — pause embaixo",
+    "passos": [
+      "Segure um halter e apoie a ponta dos pés num degrau.",
+      "Desça os calcanhares até alongar.",
+      "Suba o máximo possível."
+    ],
+    "dicaSeguranca": "Segure num apoio para equilíbrio. Pode fazer uma perna de cada vez.",
+    "alternativas": [
+      "panturrilha-em-pe",
+      "panturrilha-smith"
+    ],
+    "apiRefs": {
+      "freeExerciseDb": "Standing_Dumbbell_Calf_Raise",
+      "exerciseDbName": "dumbbell standing calf raise"
+    }
+  },
+  {
+    "id": "panturrilha-smith",
+    "nome": "Panturrilha no Smith",
+    "musculoPrincipal": "panturrilhas",
+    "musculosSecundarios": [],
+    "equipamento": "maquina",
+    "tipo": "isolador",
+    "prescricao": {
+      "series": 4,
+      "repsMin": 12,
+      "repsMax": 15,
+      "descansoSeg": 45
+    },
+    "cadencia": "2-2-1 — pause embaixo",
+    "passos": [
+      "Coloque a ponta dos pés numa anilha ou step sob a barra do Smith.",
+      "Desça os calcanhares até alongar.",
+      "Suba o máximo e desça devagar."
+    ],
+    "dicaSeguranca": "Trave a barra com cuidado ao terminar.",
+    "alternativas": [
+      "panturrilha-em-pe",
+      "panturrilha-leg-press"
+    ],
+    "apiRefs": {
+      "freeExerciseDb": "Smith_Machine_Calf_Raise",
+      "exerciseDbName": "smith calf raise"
+    }
+  },
+  {
+    "id": "panturrilha-burrinho",
+    "nome": "Panturrilha Burrinho",
+    "musculoPrincipal": "panturrilhas",
+    "musculosSecundarios": [],
+    "equipamento": "maquina",
+    "tipo": "isolador",
+    "prescricao": {
+      "series": 3,
+      "repsMin": 12,
+      "repsMax": 15,
+      "descansoSeg": 45
+    },
+    "cadencia": "2-2-1 — alongue bem",
+    "passos": [
+      "Incline o tronco à frente apoiando as mãos, com o quadril sob o apoio da máquina.",
+      "Desça os calcanhares.",
+      "Suba na ponta dos pés."
+    ],
+    "dicaSeguranca": "Coluna neutra e joelhos quase estendidos.",
+    "alternativas": [
+      "panturrilha-em-pe",
+      "panturrilha-leg-press"
+    ],
+    "apiRefs": {
+      "freeExerciseDb": "Donkey_Calf_Raises",
+      "exerciseDbName": "donkey calf raise"
+    }
+  },
+  {
+    "id": "abdominal-obliquo",
+    "nome": "Abdominal Oblíquo",
+    "musculoPrincipal": "abdomen",
+    "musculosSecundarios": [
+      "obliquos"
+    ],
+    "equipamento": "peso-corporal",
+    "tipo": "isolador",
+    "prescricao": {
+      "series": 3,
+      "repsMin": 12,
+      "repsMax": 15,
+      "descansoSeg": 45
+    },
+    "cadencia": "2-1-2 — expire ao subir",
+    "passos": [
+      "Deite com os joelhos flexionados e uma mão atrás da cabeça.",
+      "Suba levando o ombro em direção ao joelho oposto.",
+      "Desça e alterne os lados."
+    ],
+    "dicaSeguranca": "Não puxe o pescoço. O movimento é de rotação do tronco.",
+    "alternativas": [
+      "abdominal-bicicleta",
+      "torcao-russa"
+    ],
+    "apiRefs": {
+      "freeExerciseDb": "Cross-Body_Crunch",
+      "exerciseDbName": "cross body crunch"
+    }
+  },
+  {
+    "id": "abdominal-bicicleta",
+    "nome": "Abdominal Bicicleta",
+    "musculoPrincipal": "abdomen",
+    "musculosSecundarios": [
+      "obliquos"
+    ],
+    "equipamento": "peso-corporal",
+    "tipo": "isolador",
+    "prescricao": {
+      "series": 3,
+      "repsMin": 20,
+      "repsMax": 30,
+      "descansoSeg": 45
+    },
+    "cadencia": "Ritmo controlado",
+    "passos": [
+      "Deite com as mãos atrás da cabeça e pernas elevadas.",
+      "Leve o cotovelo ao joelho oposto enquanto estende a outra perna.",
+      "Alterne os lados continuamente."
+    ],
+    "dicaSeguranca": "Lombar no chão. Devagar rende mais que rápido.",
+    "alternativas": [
+      "abdominal-obliquo",
+      "abdominal-crunch"
+    ],
+    "apiRefs": {
+      "freeExerciseDb": "Air_Bike",
+      "exerciseDbName": "air bike"
+    }
+  },
+  {
+    "id": "torcao-russa",
+    "nome": "Torção Russa (Russian Twist)",
+    "musculoPrincipal": "abdomen",
+    "musculosSecundarios": [
+      "obliquos"
+    ],
+    "equipamento": "peso-corporal",
+    "tipo": "isolador",
+    "prescricao": {
+      "series": 3,
+      "repsMin": 20,
+      "repsMax": 30,
+      "descansoSeg": 45
+    },
+    "cadencia": "Gire com controle",
+    "passos": [
+      "Sente com os joelhos flexionados e o tronco inclinado para trás.",
+      "Segure as mãos juntas (ou uma anilha) à frente.",
+      "Gire o tronco de um lado para o outro."
+    ],
+    "dicaSeguranca": "Coluna longa, sem arredondar as costas. Tire os pés do chão para dificultar.",
+    "alternativas": [
+      "lenhador-polia",
+      "abdominal-obliquo"
+    ],
+    "apiRefs": {
+      "freeExerciseDb": "Russian_Twist",
+      "exerciseDbName": "russian twist"
+    }
+  },
+  {
+    "id": "prancha-lateral",
+    "nome": "Prancha Lateral",
+    "musculoPrincipal": "abdomen",
+    "musculosSecundarios": [
+      "obliquos",
+      "gluteos"
+    ],
+    "equipamento": "peso-corporal",
+    "tipo": "isolador",
+    "prescricao": {
+      "series": 3,
+      "repsMin": 20,
+      "repsMax": 40,
+      "descansoSeg": 45,
+      "unidade": "s"
+    },
+    "cadencia": "Isometria — respire normalmente",
+    "passos": [
+      "Deite de lado apoiado no antebraço com o cotovelo sob o ombro.",
+      "Eleve o quadril alinhando o corpo.",
+      "Segure e troque de lado."
+    ],
+    "dicaSeguranca": "Não deixe o quadril cair. Apoie o joelho de baixo para facilitar.",
+    "alternativas": [
+      "prancha",
+      "flexao-lateral-halter"
+    ],
+    "apiRefs": {
+      "freeExerciseDb": "Side_Bridge",
+      "exerciseDbName": "side plank"
+    }
+  },
+  {
+    "id": "flexao-lateral-halter",
+    "nome": "Flexão Lateral com Halter",
+    "musculoPrincipal": "abdomen",
+    "musculosSecundarios": [
+      "obliquos"
+    ],
+    "equipamento": "halteres",
+    "tipo": "isolador",
+    "prescricao": {
+      "series": 3,
+      "repsMin": 12,
+      "repsMax": 15,
+      "descansoSeg": 45
+    },
+    "cadencia": "2-0-2 — sem balanço",
+    "passos": [
+      "Em pé, segure um halter em uma das mãos.",
+      "Incline o tronco para o lado do halter.",
+      "Volte contraindo o lado oposto e troque de lado."
+    ],
+    "dicaSeguranca": "Movimento só para os lados, sem girar ou inclinar à frente.",
+    "alternativas": [
+      "prancha-lateral",
+      "torcao-russa"
+    ],
+    "apiRefs": {
+      "freeExerciseDb": "Dumbbell_Side_Bend",
+      "exerciseDbName": "dumbbell side bend"
+    }
+  },
+  {
+    "id": "abdominal-reverso",
+    "nome": "Abdominal Reverso",
+    "musculoPrincipal": "abdomen",
+    "musculosSecundarios": [],
+    "equipamento": "peso-corporal",
+    "tipo": "isolador",
+    "prescricao": {
+      "series": 3,
+      "repsMin": 12,
+      "repsMax": 15,
+      "descansoSeg": 45
+    },
+    "cadencia": "2-1-2 — enrole o quadril",
+    "passos": [
+      "Deite com os joelhos flexionados e as pernas elevadas.",
+      "Leve os joelhos ao peito tirando o quadril do chão.",
+      "Desça devagar."
+    ],
+    "dicaSeguranca": "Use o abdômen, não o impulso das pernas.",
+    "alternativas": [
+      "abdominal-infra",
+      "elevacao-pernas"
+    ],
+    "apiRefs": {
+      "freeExerciseDb": "Reverse_Crunch",
+      "exerciseDbName": "reverse crunch"
+    }
+  },
+  {
+    "id": "elevacao-pernas-banco",
+    "nome": "Elevação de Pernas Deitado",
+    "musculoPrincipal": "abdomen",
+    "musculosSecundarios": [],
+    "equipamento": "peso-corporal",
+    "tipo": "isolador",
+    "prescricao": {
+      "series": 3,
+      "repsMin": 12,
+      "repsMax": 15,
+      "descansoSeg": 45
+    },
+    "cadencia": "2-0-3 — desça devagar",
+    "passos": [
+      "Deite no banco segurando atrás da cabeça.",
+      "Eleve as pernas estendidas até a vertical.",
+      "Desça devagar sem tocar o banco."
+    ],
+    "dicaSeguranca": "Lombar colada no banco. Flexione os joelhos se sentir a lombar.",
+    "alternativas": [
+      "abdominal-reverso",
+      "elevacao-pernas"
+    ],
+    "apiRefs": {
+      "freeExerciseDb": "Flat_Bench_Lying_Leg_Raise",
+      "exerciseDbName": "lying leg raise"
+    }
+  },
+  {
+    "id": "roda-abdominal",
+    "nome": "Roda Abdominal",
+    "musculoPrincipal": "abdomen",
+    "musculosSecundarios": [
+      "ombros",
+      "costas"
+    ],
+    "equipamento": "outro",
+    "tipo": "isolador",
+    "prescricao": {
+      "series": 3,
+      "repsMin": 8,
+      "repsMax": 12,
+      "descansoSeg": 60
+    },
+    "cadencia": "3-0-2 — role devagar",
+    "passos": [
+      "Ajoelhe segurando a roda abaixo dos ombros.",
+      "Role para frente estendendo o corpo.",
+      "Volte contraindo o abdômen."
+    ],
+    "dicaSeguranca": "Vá só até onde conseguir sem arquear a lombar.",
+    "alternativas": [
+      "prancha",
+      "abdominal-polia"
+    ],
+    "apiRefs": {
+      "freeExerciseDb": "Ab_Roller",
+      "exerciseDbName": "wheel rollout"
+    }
+  },
+  {
+    "id": "dead-bug",
+    "nome": "Dead Bug",
+    "musculoPrincipal": "abdomen",
+    "musculosSecundarios": [],
+    "equipamento": "peso-corporal",
+    "tipo": "isolador",
+    "prescricao": {
+      "series": 3,
+      "repsMin": 10,
+      "repsMax": 12,
+      "descansoSeg": 45
+    },
+    "cadencia": "Lento e controlado",
+    "passos": [
+      "Deite com os braços estendidos para cima e joelhos a 90°.",
+      "Estenda um braço e a perna oposta sem tirar a lombar do chão.",
+      "Volte e alterne."
+    ],
+    "dicaSeguranca": "Excelente para iniciantes e para proteger a lombar.",
+    "alternativas": [
+      "prancha",
+      "pallof"
+    ],
+    "apiRefs": {
+      "freeExerciseDb": "Dead_Bug",
+      "exerciseDbName": "dead bug"
+    }
+  },
+  {
+    "id": "lenhador-polia",
+    "nome": "Lenhador na Polia (Wood Chop)",
+    "musculoPrincipal": "abdomen",
+    "musculosSecundarios": [
+      "obliquos",
+      "ombros"
+    ],
+    "equipamento": "maquina",
+    "tipo": "isolador",
+    "prescricao": {
+      "series": 3,
+      "repsMin": 10,
+      "repsMax": 12,
+      "descansoSeg": 45
+    },
+    "cadencia": "2-1-2 — gire o tronco",
+    "passos": [
+      "Fique de lado para a polia alta segurando a manopla com as duas mãos.",
+      "Puxe na diagonal até o lado oposto do quadril, girando o tronco.",
+      "Volte devagar e faça os dois lados."
+    ],
+    "dicaSeguranca": "Braços quase estendidos; o giro vem do tronco.",
+    "alternativas": [
+      "torcao-russa",
+      "pallof"
+    ],
+    "apiRefs": {
+      "freeExerciseDb": "Standing_Cable_Wood_Chop",
+      "exerciseDbName": "cable wood chop"
     }
   }
 ]

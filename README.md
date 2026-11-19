@@ -11,8 +11,9 @@ App web (PWA) para gerenciar e executar um **Treino ABC de musculação** com pe
 - **Timer de descanso** flutuante (45/60/90/120 s, +15 s, pausar), que inicia sozinho ao marcar uma série e avisa com som, vibração e flash. O tempo é calculado por horário, então continua certo com o app em segundo plano.
 - **Registro de carga e repetições** salvo automaticamente, com "Última vez: 20 kg × 10".
 - **Trocar exercício** por uma alternativa (aparelho ocupado), com opção de restaurar o original.
-- **Filtros combinados**: grupo muscular, equipamento e busca por nome sem acento.
-- **Biblioteca**: 67 exercícios do app em português + ~600 do free-exercise-db quando houver internet.
+- **Adicionar exercícios ao treino**: qualquer exercício da Biblioteca pode entrar no Treino A, B ou C como extra (e ser removido depois).
+- **Filtros combinados**: 14 grupos musculares (incluindo trapézio, antebraço, lombar e adutores), equipamento e busca por nome sem acento.
+- **Biblioteca**: 139 exercícios do app em português + ~600 do free-exercise-db quando houver internet.
 - **Histórico** de treinos, sugestão do próximo treino (A→B→C), exportar/importar backup em JSON.
 - Mantém a tela ligada durante o treino (Wake Lock API, quando suportada).
 

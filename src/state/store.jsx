@@ -4,7 +4,7 @@ import { WORKOUTS, NEXT } from '../data/workouts.js';
 
 export const SCHEMA = 1;
 const P = 'abc:v1:';
-const KEYS = ['perfil', 'nivel', 'trocas', 'cargas', 'checks', 'historico', 'config', 'proximo'];
+const KEYS = ['perfil', 'nivel', 'trocas', 'extras', 'exCache', 'cargas', 'checks', 'historico', 'config', 'proximo'];
 
 export const BY_ID = Object.fromEntries(EXERCISES.map((e) => [e.id, e]));
 export { EXERCISES };
@@ -13,6 +13,8 @@ const DEFAULTS = {
   perfil: 'masculino',
   nivel: 'intermediario',
   trocas: {}, // { perfil: { treino: { idOriginal: idNovo } } }
+  extras: {}, // { perfil: { treino: [exId] } } exercícios adicionados pelo usuário
+  exCache: {}, // { exId: ex } cópia dos exercícios da API adicionados (para funcionar offline)
   cargas: {}, // { exId: { atual: {kg, reps}, ultima: {kg, reps, data} } }
   checks: {}, // { perfil: { treino: { exId: [bool...] } } }
   historico: [], // [{ data, perfil, treino, itens: [...] }]
@@ -87,6 +89,19 @@ function reducer(s, a) {
       return { ...s, trocas: setIn(s.trocas, [s.perfil, treino], mapa), checks };
     }
 
+    case 'addExtra': {
+      const { treino, ex } = a;
+      const lista = s.extras?.[s.perfil]?.[treino] || [];
+      if (lista.includes(ex.id)) return s;
+      const exCache = BY_ID[ex.id] ? s.exCache : { ...s.exCache, [ex.id]: ex };
+      return { ...s, exCache, extras: setIn(s.extras, [s.perfil, treino], [...lista, ex.id]) };
+    }
+
+    case 'removeExtra': {
+      const lista = (s.extras?.[s.perfil]?.[a.treino] || []).filter((id) => id !== a.id);
+      return { ...s, extras: setIn(s.extras, [s.perfil, a.treino], lista) };
+    }
+
     case 'finalizar': {
       const { treino, itens } = a;
       const data = new Date().toISOString();
@@ -145,7 +160,16 @@ export const useStore = () => useContext(Ctx);
 export function workoutSlots(state, treino) {
   const base = WORKOUTS[state.perfil][treino].exercicios;
   const trocas = state.trocas?.[state.perfil]?.[treino] || {};
-  return base.map((slotId) => ({ slotId, ex: BY_ID[trocas[slotId]] || BY_ID[slotId] }));
+  const principais = base.map((slotId) => ({ slotId, ex: BY_ID[trocas[slotId]] || BY_ID[slotId] }));
+  const extras = (state.extras?.[state.perfil]?.[treino] || [])
+    .map((id) => ({ slotId: `extra:${id}`, ex: BY_ID[id] || state.exCache?.[id], extra: true }))
+    .filter((s) => s.ex);
+  return [...principais, ...extras];
+}
+
+/** Treinos (A/B/C) do perfil atual em que o exercício já está. */
+export function treinosCom(state, exId) {
+  return ['A', 'B', 'C'].filter((t) => workoutSlots(state, t).some((s) => s.ex.id === exId));
 }
 
 export function exportData(state) {

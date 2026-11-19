@@ -15,7 +15,8 @@ export default function LibraryView({ filtros, setFiltros, onOpen }) {
   const { state } = useStore();
   const [remoto, setRemoto] = useState({ itens: [], fonte: 'carregando' });
   const [limite, setLimite] = useState(PAGINA);
-  const busca = useDebounce(filtros.busca, 200);
+  const buscaDeb = useDebounce(filtros.busca, 200);
+  const busca = filtros.busca === '' ? '' : buscaDeb; // limpar a busca vale na hora
 
   useEffect(() => {
     let vivo = true;

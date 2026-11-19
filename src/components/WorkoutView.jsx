@@ -1,5 +1,5 @@
 import { useMemo } from 'react';
-import { Flag, Sparkles } from 'lucide-react';
+import { Flag, Plus, Sparkles } from 'lucide-react';
 import ExerciseCard from './ExerciseCard.jsx';
 import Filters, { aplicarFiltros } from './Filters.jsx';
 import { useStore, workoutSlots } from '../state/store.jsx';
@@ -7,11 +7,12 @@ import { WORKOUTS } from '../data/workouts.js';
 import { prescribe } from '../lib/prescription.js';
 import { useDebounce, useWakeLock } from '../lib/hooks.js';
 
-export default function WorkoutView({ treino, filtros, setFiltros, onOpen, onToast }) {
+export default function WorkoutView({ treino, filtros, setFiltros, onOpen, onToast, onAddExercise }) {
   const { state, dispatch } = useStore();
   const info = WORKOUTS[state.perfil][treino];
   const slots = workoutSlots(state, treino);
-  const busca = useDebounce(filtros.busca, 200);
+  const buscaDeb = useDebounce(filtros.busca, 200);
+  const busca = filtros.busca === '' ? '' : buscaDeb; // limpar a busca vale na hora
   const visiveis = useMemo(() => aplicarFiltros(slots, filtros, busca), [slots, filtros, busca]);
 
   const checks = state.checks?.[state.perfil]?.[treino] || {};
@@ -71,18 +72,24 @@ export default function WorkoutView({ treino, filtros, setFiltros, onOpen, onToa
         </p>
       ) : (
         <div className="space-y-3">
-          {visiveis.map(({ slotId, ex }) => (
+          {visiveis.map(({ slotId, ex, extra }) => (
             <ExerciseCard
               key={slotId}
               ex={ex}
               slotId={slotId}
               treino={treino}
               ordem={slots.findIndex((s) => s.slotId === slotId) + 1}
-              onOpen={(e, sid, swap) => onOpen({ ex: e, slotId: sid, treino, swap })}
+              extra={extra}
+              onOpen={(e, sid, swap) => onOpen(extra ? { ex: e } : { ex: e, slotId: sid, treino, swap })}
+              onRemove={(e) => { dispatch({ type: 'removeExtra', treino, id: e.id }); onToast(`${e.nome} removido do Treino ${treino}.`); }}
             />
           ))}
         </div>
       )}
+
+      <button type="button" onClick={onAddExercise} className="flex h-12 w-full items-center justify-center gap-2 rounded-2xl border border-dashed border-accent/50 font-bold text-accent active:bg-accent/10">
+        <Plus size={18} aria-hidden="true" /> Adicionar exercício da Biblioteca
+      </button>
 
       <button type="button" onClick={finalizar} className={`flex h-14 w-full items-center justify-center gap-2 rounded-2xl text-lg font-black ${pct === 100 ? 'bg-success text-bg' : 'border border-line bg-card text-white'}`}>
         <Flag size={20} aria-hidden="true" /> Finalizar treino

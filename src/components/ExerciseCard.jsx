@@ -1,4 +1,4 @@
-import { Check, Info, Minus, Plus, Timer as TimerIcon, Repeat } from 'lucide-react';
+import { Check, Info, Minus, Plus, Timer as TimerIcon, Repeat, Trash2 } from 'lucide-react';
 import ExerciseMedia from './ExerciseMedia.jsx';
 import { MUSCULOS } from '../lib/labels.js';
 import { prescribe, repsLabel } from '../lib/prescription.js';
@@ -39,7 +39,7 @@ function Stepper({ label, value, onChange, step, unit, placeholder }) {
   );
 }
 
-export default function ExerciseCard({ ex, slotId, treino, ordem, onOpen }) {
+export default function ExerciseCard({ ex, slotId, treino, ordem, extra = false, onOpen, onRemove }) {
   const { state, dispatch } = useStore();
   const timer = useTimer();
   const p = prescribe(ex, state.nivel);
@@ -68,6 +68,7 @@ export default function ExerciseCard({ ex, slotId, treino, ordem, onOpen }) {
         <div className="min-w-0 flex-1">
           <div className="flex items-center gap-2 text-xs font-semibold text-accent">
             <span>#{ordem}</span>
+            {extra && <span className="rounded bg-line px-1.5 py-0.5 text-[10px] uppercase text-muted">extra</span>}
             <span className="text-muted">·</span>
             <span>{MUSCULOS[ex.musculoPrincipal]}</span>
             {completo && <Check size={16} className="ml-auto text-success" aria-label="Exercício concluído" />}
@@ -132,9 +133,15 @@ export default function ExerciseCard({ ex, slotId, treino, ordem, onOpen }) {
             ? <>Última vez: <span className="font-semibold text-white">{ultima.kg != null && ultima.kg !== '' ? `${ultima.kg} kg` : ''}{ultima.kg && ultima.reps ? ' × ' : ''}{ultima.reps ?? ''}{segundos ? ' s' : ''}</span> · {formatDate(ultima.data)}</>
             : 'Sem registro anterior'}
         </p>
-        <button type="button" onClick={() => onOpen(ex, slotId, true)} className="flex h-10 items-center gap-1 rounded-lg px-2 text-xs font-semibold text-accent active:bg-accent/10">
-          <Repeat size={14} aria-hidden="true" /> Trocar
-        </button>
+        {extra ? (
+          <button type="button" onClick={() => onRemove(ex)} className="flex h-10 items-center gap-1 rounded-lg px-2 text-xs font-semibold text-red-300 active:bg-red-500/10">
+            <Trash2 size={14} aria-hidden="true" /> Remover
+          </button>
+        ) : (
+          <button type="button" onClick={() => onOpen(ex, slotId, true)} className="flex h-10 items-center gap-1 rounded-lg px-2 text-xs font-semibold text-accent active:bg-accent/10">
+            <Repeat size={14} aria-hidden="true" /> Trocar
+          </button>
+        )}
       </div>
     </article>
   );

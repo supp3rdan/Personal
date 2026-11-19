@@ -1,8 +1,8 @@
 import { useEffect, useRef, useState } from 'react';
-import { ArrowLeft, CheckCircle2, RotateCcw, ShieldAlert } from 'lucide-react';
+import { ArrowLeft, Check, CheckCircle2, Plus, RotateCcw, ShieldAlert } from 'lucide-react';
 import Modal from './Modal.jsx';
 import ExerciseMedia from './ExerciseMedia.jsx';
-import { BY_ID, EXERCISES, useStore } from '../state/store.jsx';
+import { BY_ID, EXERCISES, treinosCom, useStore } from '../state/store.jsx';
 import { EQUIPAMENTOS, MUSCULOS, NIVEIS, grupoDe } from '../lib/labels.js';
 import { prescribe, repsLabel } from '../lib/prescription.js';
 
@@ -38,6 +38,11 @@ export default function DetailModal({ item, onClose, onToast }) {
   const noTreinoId = podeTrocar ? (state.trocas?.[state.perfil]?.[item.treino]?.[item.slotId] || item.slotId) : null;
   const ehLocal = !!BY_ID[ex.id];
   const alts = alternativasDe(ex).filter((a) => a.id !== ex.id);
+  const jaEm = treinosCom(state, ex.id);
+  const adicionar = (t) => {
+    dispatch({ type: 'addExtra', treino: t, ex });
+    onToast(`${ex.nome} adicionado ao Treino ${t}.`);
+  };
 
   const usar = (novo) => {
     dispatch({ type: 'trocar', treino: item.treino, slotId: item.slotId, novoId: novo.id });
@@ -60,6 +65,27 @@ export default function DetailModal({ item, onClose, onToast }) {
           <CheckCircle2 size={20} /> Usar esta no meu treino
         </button>
       )}
+
+      <section className="mt-3 rounded-xl border border-line p-3">
+        <h3 className="text-sm font-bold text-white">Adicionar ao treino ({state.perfil === 'masculino' ? 'Masculino' : 'Feminino'})</h3>
+        <div className="mt-2 grid grid-cols-3 gap-2">
+          {['A', 'B', 'C'].map((t) => {
+            const ja = jaEm.includes(t);
+            return (
+              <button
+                key={t}
+                type="button"
+                disabled={ja}
+                onClick={() => adicionar(t)}
+                className={`flex h-12 items-center justify-center gap-1 rounded-xl text-sm font-bold ${ja ? 'bg-success/15 text-success' : 'bg-accent/15 text-accent active:bg-accent active:text-bg'}`}
+                aria-label={ja ? `Já está no Treino ${t}` : `Adicionar ao Treino ${t}`}
+              >
+                {ja ? <Check size={16} aria-hidden="true" /> : <Plus size={16} aria-hidden="true" />} Treino {t}
+              </button>
+            );
+          })}
+        </div>
+      </section>
 
       <div className="mt-4 grid grid-cols-3 gap-2 text-center">
         <div className="rounded-xl bg-bg p-2"><div className="text-lg font-bold text-accent">{p.series}</div><div className="text-xs text-muted">séries</div></div>
